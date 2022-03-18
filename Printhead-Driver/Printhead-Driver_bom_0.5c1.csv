@@ -1,0 +1,53 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
+1,"Unpolarized capacitor, small symbol",C_Small,C40,470pF,C_0603_1608Metric,1,~
+2,"Unpolarized capacitor, small symbol",C_Small,C1 C2 C3 C4 C7 C8 C9 C10 C13 C14 C15 C16 C19 C20 C21 C22 C31 C34 C39 C41,100nF,C_0603_1608Metric,20,~
+3,"Unpolarized capacitor, small symbol",C_Small,C35,4.7uF,C_0603_1608Metric,1,~
+4,"Unpolarized capacitor, small symbol",C_Small,C33,10uF,C_0603_1608Metric,1,~
+5,"Unpolarized capacitor, small symbol",C_Small,C32 C42,22uF,C_0603_1608Metric,2,~
+6,"Polarized capacitor, small symbol",CP_Small,C29 C30,1000uF/63V,CP_Radial_D16.0mm_P7.50mm,2,~
+7,"Unpolarized capacitor, small symbol",C_Small,C44,100nF-DNF,C_0603_1608Metric,1,~
+8,"Unpolarized capacitor, small symbol",C_Small,C28,100nF/100V,C_0603_1608Metric,1,~
+9,"Unpolarized capacitor, small symbol",C_Small,C27 C38,100nF/50V,C_0603_1608Metric,2,~
+10,"Polarized capacitor, small symbol",CP_Small,C5 C6 C11 C12 C17 C18 C23 C24 C25 C26 C36 C43,100uF/63V,CP_Radial_D8.0mm_P3.50mm,12,~
+11,"Unpolarized capacitor, small symbol",C_Small,C37,22uF/50V,C_0603_1608Metric,1,~
+12,"Diode, small symbol",D_Small,D2,1N4007,D_SMA,1,~
+13,"Light emitting diode, small symbol",LED_Small,D4 D5 D6,Green,LED_0805_2012Metric,3,~
+14,"Schottky diode, small symbol",D_Schottky_Small,D3,SS34,D_SMA,1,~
+15,"Schottky diode, small symbol",D_Schottky_Small,D1,SS510,D_SMA,1,~
+16,"Ferrite bead, small symbol",Ferrite_Bead_Small,FB1,120uH,R_0805_2012Metric,1,~
+17,"Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_02x10_Odd_Even,J2,2 x 10 Pinheader,PinHeader_2x10_P2.54mm_Vertical,1,~
+18,"Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",Screw_Terminal_01x02,J3,24V Power In,TerminalBlock_Altech_AK300-2_P5.00mm,1,~
+19,"Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x03_Male,J4,ADC Select1,PinHeader_1x03_P2.54mm_Vertical,1,~
+20,"Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_02x08_Odd_Even,J1,IDC_Connector,IDC-Header_2x08_P2.54mm_Horizontal,1,~
+21,"Inductor, small symbol",L_Small,L2,220uH/2.1A,L_220uH_2A_15x15mm_H8mm,1,~
+22,"Inductor, small symbol",L_Small,L1,47uH/5A,L_47uH_4A_11mmx10mm_H4.8mm,1,~
+23,"Resistor, small symbol",R_Small,R14,1.8K,R_0603_1608Metric,1,~
+24,"Resistor, small symbol",R_Small,R17,2.7K,R_0805_2012Metric,1,~
+25,"Resistor, small symbol",R_Small,R13,3K,R_0603_1608Metric,1,~
+26,"Resistor, small symbol",R_Small,R9 R10 R11,10K,R_0603_1608Metric,3,~
+27,"Resistor, small symbol",R_Small,R15,25K,R_0805_2012Metric,1,~
+28,"Resistor, small symbol",R_Small,R16,60K,R_0805_2012Metric,1,~
+29,"Resistor, small symbol",R_Small,R1 R2 R3 R4 R5 R6 R7 R8,0.03R**,R_2512_6332Metric,8,~
+30,"Resistor, small symbol",R_Small,R12,R0.33,R_2512_6332Metric,1,~
+31,Potentiometer,R_POT,RV1,100K,Potentiometer_Bourns_3266Y_Vertical,1,~
+32,"I2C-Compatible, 12-Bit Analog-to-Digital Converter with Alert Function, MSOP-8",ADC121C021CIMM,U11,ADC121C021CIMM,MSOP-8_3x3mm_P0.65mm,1,http://www.ti.com/lit/ds/symlink/adc121c021.pdf
+33,"1.5A, step-up/down/inverting switching regulator, 3-40V Vin, 100kHz, SO-8",MC34063AD,U10,MC34063AD,SOIC-8_3.9x4.9mm_P1.27mm,1,http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF
+34,"Current Sensor, 5A, 1.5MHz",MCA1101-5-3,U9,MCA1101-5-3,SOIC-16W_7.5x10.3mm_P1.27mm,1,
+35,"Motor Driver, 45V 3.6A, HSOP-8-1EP",TMI8870B,U1 U2 U3 U4 U5 U6 U7 U8,TMI8870B,HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm_ThermalVias,8,
+36,"DC-DC Buck, Boost 3-40V in, up to 60V out at 4A",XL6019,VR1,XL6019,DPAK170P1435X465-6N,1,
+
+
+
+
+
+Component Groups:,36
+Component Count:,87
+Fitted Components:,87
+Number of PCBs:,1
+Total components:,87
+Schematic Version:,0.5c1
+Schematic Date:,2022-03-18
+PCB Variant:,default
+BoM Date:,18/03/2022 17:04:29
+Schematic Source:,Printhead-Driver.sch
+KiCad Version:,Eeschema (5.1.12)-1
