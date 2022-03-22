@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Open-PyroJet"
-Date "2022-03-16"
-Rev "0.5c1"
+Date "2022-03-22"
+Rev "0.5c2"
 Comp "OPJ"
 Comment1 "PRL"
 Comment2 ""
@@ -270,9 +270,7 @@ Wire Wire Line
 Wire Wire Line
 	3245 1875 3170 1875
 NoConn ~ 3170 1975
-NoConn ~ 3170 2075
 NoConn ~ 3170 2375
-NoConn ~ 3245 1675
 Text Notes 2125 3790 0    50   ~ 0
 Input Only:\nPin4 - GPIO36\nPin5 - GPIO39\nPin6 - GPIO34\nPin7 - GPIO35\nPin8 - GPIO39\n
 Text Notes 2100 2080 0    50   ~ 0
@@ -824,12 +822,12 @@ Wire Wire Line
 	3245 3375 3170 3375
 Wire Wire Line
 	3245 3475 3170 3475
-Text Notes 1085 5650 0    50   ~ 0
+Text Notes 970  4915 0    50   ~ 0
 Design Philosophy:\n* over engineered to enable experimentation and exploration of a filament and nozzle limits\n* cost is not a big driver for this design, but it has been taken into account\n* not much thought on mounting issues, but this version will have to be mounted close to the printhead
-Text Notes 3885 3250 0    50   ~ 0
-1 easy to use spare GPIO
-Text Notes 3640 2055 0    50   ~ 0
-4 extra spare strapping pin GPIO
+Text Notes 3635 3695 0    50   ~ 0
+1 easy to use spare RO GPIO
+Text Notes 3600 1990 0    50   ~ 0
+2 extra spare strapping pin GPIO
 Wire Wire Line
 	3245 3275 3170 3275
 Wire Wire Line
@@ -967,7 +965,6 @@ Text Notes 8570 4485 0    50   ~ 0
 Optional Audible Alerts
 Text GLabel 3245 3175 2    50   Input ~ 0
 BUZZER
-NoConn ~ 3170 3575
 $Comp
 L Device:D_Small D?
 U 1 1 6234095F
@@ -1605,6 +1602,66 @@ F 1 "MH-M3" H 7670 5635 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 7570 5680 50  0001 C CNN
 F 3 "~" H 7570 5680 50  0001 C CNN
 	1    7570 5680
+	1    0    0    -1  
+$EndComp
+Text GLabel 3245 3575 2    50   Input ~ 0
+EN_VSW
+Wire Wire Line
+	3245 3575 3170 3575
+Text GLabel 3245 2075 2    50   Input ~ 0
+EN_24V
+Wire Wire Line
+	3245 2075 3170 2075
+Text GLabel 3245 1675 2    50   Input ~ 0
+EN_3.3V
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 62778B95
+P 3640 5630
+AR Path="/627661BA/62778B95" Ref="J?"  Part="1" 
+AR Path="/62778B95" Ref="J5"  Part="1" 
+F 0 "J5" H 3655 5880 50  0000 C CNN
+F 1 "Nozzle2 Board (Future)" H 3605 5290 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3640 5630 50  0001 C CNN
+F 3 "~" H 3640 5630 50  0001 C CNN
+	1    3640 5630
+	-1   0    0    1   
+$EndComp
+Text Notes 3275 5465 0    50   ~ 0
+EN_VSW
+Text Notes 3275 5565 0    50   ~ 0
+EN_24V
+Text Notes 3270 5660 0    50   ~ 0
+EN_3.3V
+Text Notes 3270 5760 0    50   ~ 0
+GND
+Text GLabel 3920 5430 2    50   Input ~ 0
+EN_VSW
+Text GLabel 3920 5530 2    50   Input ~ 0
+EN_24V
+Text GLabel 3920 5630 2    50   Input ~ 0
+EN_3.3V
+Wire Wire Line
+	3840 5430 3920 5430
+Wire Wire Line
+	3840 5530 3920 5530
+Wire Wire Line
+	3840 5630 3920 5630
+Wire Wire Line
+	3840 5730 3875 5730
+Wire Wire Line
+	3875 5730 3875 5770
+$Comp
+L power:GND #PWR?
+U 1 1 627BD38A
+P 3875 5770
+AR Path="/6231FCB3/627BD38A" Ref="#PWR?"  Part="1" 
+AR Path="/627BD38A" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 3875 5520 50  0001 C CNN
+F 1 "GND" H 3995 5665 50  0000 C CNN
+F 2 "" H 3875 5770 50  0001 C CNN
+F 3 "" H 3875 5770 50  0001 C CNN
+	1    3875 5770
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

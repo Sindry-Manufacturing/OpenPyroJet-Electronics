@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title ""
-Date "2022-03-18"
-Rev "0.5c1"
+Title "Open-PyroJet-Driver"
+Date "2022-03-22"
+Rev "0.5c2"
 Comp "PRL"
 Comment1 "Open Hardware"
 Comment2 ""
@@ -292,24 +292,6 @@ Wire Wire Line
 	2945 4135 2810 4135
 Wire Wire Line
 	2810 4235 3030 4235
-Wire Wire Line
-	2810 4035 2810 3915
-$Comp
-L power:+VSW #PWR?
-U 1 1 6313E9CC
-P 2810 3915
-AR Path="/6229DCDC/6313E9CC" Ref="#PWR?"  Part="1" 
-AR Path="/62560F5D/6313E9CC" Ref="#PWR?"  Part="1" 
-AR Path="/629B5586/6313E9CC" Ref="#PWR?"  Part="1" 
-AR Path="/630E7389/6313E9CC" Ref="#PWR?"  Part="1" 
-AR Path="/6313E9CC" Ref="#PWR031"  Part="1" 
-F 0 "#PWR031" H 2810 3765 50  0001 C CNN
-F 1 "+VSW" H 2880 4045 50  0000 C CNN
-F 2 "" H 2810 3915 50  0001 C CNN
-F 3 "" H 2810 3915 50  0001 C CNN
-	1    2810 3915
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small R6
 U 1 1 6313E9D2
@@ -523,15 +505,15 @@ AR Path="/629B5586/6313EA37" Ref="C?"  Part="1"
 AR Path="/62560F5D/6313EA37" Ref="C?"  Part="1" 
 AR Path="/630E7389/6313EA37" Ref="C?"  Part="1" 
 AR Path="/6313EA37" Ref="C14"  Part="1" 
-F 0 "C14" V 3045 3745 50  0000 C CNN
-F 1 "100nF" V 3055 4035 50  0000 C CNN
+F 0 "C14" V 3070 3990 50  0000 C CNN
+F 1 "100nF" V 3145 4030 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3105 3885 50  0001 C CNN
 F 3 "~" H 3105 3885 50  0001 C CNN
 	1    3105 3885
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2810 4035 2895 4035
+	2810 4035 2835 4035
 Wire Wire Line
 	3005 3885 2895 3885
 Wire Wire Line
@@ -566,7 +548,6 @@ F 3 "" H 3510 3900 50  0001 C CNN
 	1    3510 3900
 	-1   0    0    -1  
 $EndComp
-Connection ~ 2810 4035
 Connection ~ 2800 2650
 $Comp
 L Device:C_Small C?
@@ -1613,22 +1594,20 @@ Wire Wire Line
 	5660 5575 5525 5575
 Wire Wire Line
 	5525 5675 5745 5675
-Wire Wire Line
-	5525 5475 5525 5355
 $Comp
 L power:+VSW #PWR?
 U 1 1 6313EC31
-P 5525 5355
+P 3045 3760
 AR Path="/6229DCDC/6313EC31" Ref="#PWR?"  Part="1" 
 AR Path="/62560F5D/6313EC31" Ref="#PWR?"  Part="1" 
 AR Path="/629B5586/6313EC31" Ref="#PWR?"  Part="1" 
 AR Path="/630E7389/6313EC31" Ref="#PWR?"  Part="1" 
 AR Path="/6313EC31" Ref="#PWR042"  Part="1" 
-F 0 "#PWR042" H 5525 5205 50  0001 C CNN
-F 1 "+VSW" H 5605 5490 50  0000 C CNN
-F 2 "" H 5525 5355 50  0001 C CNN
-F 3 "" H 5525 5355 50  0001 C CNN
-	1    5525 5355
+F 0 "#PWR042" H 3045 3610 50  0001 C CNN
+F 1 "+VSW" H 2940 3885 50  0000 C CNN
+F 2 "" H 3045 3760 50  0001 C CNN
+F 3 "" H 3045 3760 50  0001 C CNN
+	1    3045 3760
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1731,7 +1710,7 @@ F 3 "~" H 5820 5325 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5525 5475 5610 5475
+	5525 5475 5540 5475
 Wire Wire Line
 	5720 5325 5610 5325
 Wire Wire Line
@@ -1766,7 +1745,6 @@ F 3 "" H 6225 5340 50  0001 C CNN
 	1    6225 5340
 	-1   0    0    -1  
 $EndComp
-Connection ~ 5525 5475
 $Comp
 L Device:C_Small C?
 U 1 1 6313EC78
@@ -2026,7 +2004,7 @@ U 1 1 62635BDD
 P 5820 5475
 AR Path="/630E7112/62635BDD" Ref="C?"  Part="1" 
 AR Path="/62635BDD" Ref="C23"  Part="1" 
-F 0 "C23" V 5865 5560 50  0000 L CNN
+F 0 "C23" V 5870 5530 50  0000 L CNN
 F 1 "100uF/63V" V 5780 5010 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 5820 5475 50  0001 C CNN
 F 3 "~" H 5820 5475 50  0001 C CNN
@@ -2052,7 +2030,7 @@ U 1 1 626370C1
 P 3105 4035
 AR Path="/630E7112/626370C1" Ref="C?"  Part="1" 
 AR Path="/626370C1" Ref="C18"  Part="1" 
-F 0 "C18" V 3150 4120 50  0000 L CNN
+F 0 "C18" V 3150 4085 50  0000 L CNN
 F 1 "100uF/63V" V 3065 3570 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 3105 4035 50  0001 C CNN
 F 3 "~" H 3105 4035 50  0001 C CNN
@@ -2326,4 +2304,70 @@ F 3 "~" H 10425 6900 50  0001 C CNN
 	1    10425 6900
 	1    0    0    -1  
 $EndComp
+Text Notes 2940 3625 0    50   ~ 0
+VSW
+Text Notes 2570 3625 0    50   ~ 0
+Ext
+Wire Wire Line
+	2935 3795 2935 3815
+Wire Wire Line
+	2935 3815 3045 3815
+Wire Wire Line
+	3045 3815 3045 3760
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 625AC358
+P 2835 3595
+AR Path="/630E7112/625AC358" Ref="J?"  Part="1" 
+AR Path="/625AC358" Ref="J5"  Part="1" 
+F 0 "J5" V 2905 3475 50  0000 R CNN
+F 1 "Noz2 Voltage Selection" V 2995 4685 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2835 3595 50  0001 C CNN
+F 3 "~" H 2835 3595 50  0001 C CNN
+	1    2835 3595
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J?
+U 1 1 626245B7
+P 2435 3825
+AR Path="/630E7112/626245B7" Ref="J?"  Part="1" 
+AR Path="/626245B7" Ref="J6"  Part="1" 
+F 0 "J6" H 2520 3780 50  0000 R CNN
+F 1 "Ext" H 2660 3715 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2435 3825 50  0001 C CNN
+F 3 "~" H 2435 3825 50  0001 C CNN
+	1    2435 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2735 3795 2735 3825
+Wire Wire Line
+	2735 3825 2635 3825
+Wire Wire Line
+	2835 3795 2835 4035
+Connection ~ 2835 4035
+Wire Wire Line
+	2835 4035 2895 4035
+Wire Wire Line
+	5540 5475 5540 5355
+$Comp
+L power:+VSW #PWR?
+U 1 1 6271D937
+P 5540 5355
+AR Path="/6229DCDC/6271D937" Ref="#PWR?"  Part="1" 
+AR Path="/62560F5D/6271D937" Ref="#PWR?"  Part="1" 
+AR Path="/629B5586/6271D937" Ref="#PWR?"  Part="1" 
+AR Path="/630E7389/6271D937" Ref="#PWR?"  Part="1" 
+AR Path="/6271D937" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 5540 5205 50  0001 C CNN
+F 1 "+VSW" H 5620 5490 50  0000 C CNN
+F 2 "" H 5540 5355 50  0001 C CNN
+F 3 "" H 5540 5355 50  0001 C CNN
+	1    5540 5355
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5540 5475
+Wire Wire Line
+	5540 5475 5610 5475
 $EndSCHEMATC

@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title "Open-PyroJet-UART"
-Date "2022-03-16"
-Rev "0.5c1"
+Date "2022-03-22"
+Rev "0.5c2"
 Comp "OPJ"
 Comment1 "PRL"
 Comment2 ""
