@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Open PyroJet Printhead"
-Date "2022-03-26"
-Rev "Gen3.1"
+Date "2022-03-29"
+Rev "Gen3.1a"
 Comp "PRL"
 Comment1 "4 layer stack of PCBs.  Dimensions imported via DFX from CAD drawing"
 Comment2 ""
@@ -121,10 +121,10 @@ Wire Wire Line
 Wire Wire Line
 	3300 1980 3435 1980
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H1
+L Pauls_Symbol_Library:OPJ_1.27 H24
 U 1 1 6282D091
 P 3050 1980
-F 0 "H1" H 2770 2030 50  0000 C CNN
+F 0 "H24" H 2770 2030 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 1985 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 1830 50  0001 C CNN
 F 3 "" H 3050 1630 50  0001 C CNN
@@ -132,10 +132,10 @@ F 3 "" H 3050 1630 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H2
+L Pauls_Symbol_Library:OPJ_1.27 H29
 U 1 1 6282DF82
 P 3050 2080
-F 0 "H2" H 2770 2130 50  0000 C CNN
+F 0 "H29" H 2770 2130 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2085 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 1930 50  0001 C CNN
 F 3 "" H 3050 1730 50  0001 C CNN
@@ -143,10 +143,10 @@ F 3 "" H 3050 1730 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H3
+L Pauls_Symbol_Library:OPJ_1.27 H32
 U 1 1 6282E383
 P 3050 2180
-F 0 "H3" H 2770 2230 50  0000 C CNN
+F 0 "H32" H 2770 2230 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2185 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 2030 50  0001 C CNN
 F 3 "" H 3050 1830 50  0001 C CNN
@@ -154,10 +154,10 @@ F 3 "" H 3050 1830 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H4
+L Pauls_Symbol_Library:OPJ_1.27 H33
 U 1 1 6282E8AE
 P 3050 2280
-F 0 "H4" H 2770 2330 50  0000 C CNN
+F 0 "H33" H 2770 2330 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2285 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 2130 50  0001 C CNN
 F 3 "" H 3050 1930 50  0001 C CNN
@@ -165,10 +165,10 @@ F 3 "" H 3050 1930 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H5
+L Pauls_Symbol_Library:OPJ_1.27 H34
 U 1 1 6282EBAF
 P 3050 2380
-F 0 "H5" H 2770 2430 50  0000 C CNN
+F 0 "H34" H 2770 2430 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2385 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 2230 50  0001 C CNN
 F 3 "" H 3050 2030 50  0001 C CNN
@@ -176,10 +176,10 @@ F 3 "" H 3050 2030 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H6
+L Pauls_Symbol_Library:OPJ_1.27 H35
 U 1 1 6282F046
 P 3050 2480
-F 0 "H6" H 2770 2530 50  0000 C CNN
+F 0 "H35" H 2770 2530 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2485 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 2330 50  0001 C CNN
 F 3 "" H 3050 2130 50  0001 C CNN
@@ -187,10 +187,10 @@ F 3 "" H 3050 2130 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H7
+L Pauls_Symbol_Library:OPJ_1.27 H36
 U 1 1 6282F41B
 P 3050 2580
-F 0 "H7" H 2770 2630 50  0000 C CNN
+F 0 "H36" H 2770 2630 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2585 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 2430 50  0001 C CNN
 F 3 "" H 3050 2230 50  0001 C CNN
@@ -198,10 +198,10 @@ F 3 "" H 3050 2230 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Pauls_Symbol_Library:OPJ_1.27 H8
+L Pauls_Symbol_Library:OPJ_1.27 H39
 U 1 1 6282FCD3
 P 3050 2680
-F 0 "H8" H 2770 2730 50  0000 C CNN
+F 0 "H39" H 2770 2730 50  0000 C CNN
 F 1 "OPJ_1.27" H 3795 2685 50  0000 C CNN
 F 2 "Pauls_KiCAD_Libraries:OPJ_1.27" H 3150 2530 50  0001 C CNN
 F 3 "" H 3050 2330 50  0001 C CNN
@@ -231,10 +231,10 @@ F 3 "" H 10150 3110 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H9
+L Mechanical:MountingHole H7
 U 1 1 623F805D
 P 7080 1500
-F 0 "H9" H 7180 1546 50  0000 L CNN
+F 0 "H7" H 7180 1546 50  0000 L CNN
 F 1 "M2" H 7180 1455 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7080 1500 50  0001 C CNN
 F 3 "~" H 7080 1500 50  0001 C CNN
@@ -242,10 +242,10 @@ F 3 "~" H 7080 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H10
+L Mechanical:MountingHole H14
 U 1 1 623F8577
 P 7080 1675
-F 0 "H10" H 7180 1721 50  0000 L CNN
+F 0 "H14" H 7180 1721 50  0000 L CNN
 F 1 "M2" H 7180 1630 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7080 1675 50  0001 C CNN
 F 3 "~" H 7080 1675 50  0001 C CNN
@@ -253,10 +253,10 @@ F 3 "~" H 7080 1675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H11
+L Mechanical:MountingHole H23
 U 1 1 623FB56D
 P 7095 1920
-F 0 "H11" H 7195 1966 50  0000 L CNN
+F 0 "H23" H 7195 1966 50  0000 L CNN
 F 1 "M2" H 7195 1875 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7095 1920 50  0001 C CNN
 F 3 "~" H 7095 1920 50  0001 C CNN
@@ -264,10 +264,10 @@ F 3 "~" H 7095 1920 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H12
+L Mechanical:MountingHole H30
 U 1 1 623FBBD4
 P 7100 2090
-F 0 "H12" H 7200 2136 50  0000 L CNN
+F 0 "H30" H 7200 2136 50  0000 L CNN
 F 1 "M2" H 7200 2045 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7100 2090 50  0001 C CNN
 F 3 "~" H 7100 2090 50  0001 C CNN
@@ -301,10 +301,10 @@ Wire Notes Line
 Text Notes 1220 4285 0    50   ~ 0
 Note: Four PCB layers are imported into KiACD via DFX files.  \nThese are used to generate their corrosponding edge outlines.\nWith a bit of tweaking here and there.
 $Comp
-L Mechanical:MountingHole H13
+L Mechanical:MountingHole H37
 U 1 1 623F89D4
 P 6885 2595
-F 0 "H13" H 6985 2641 50  0000 L CNN
+F 0 "H37" H 6985 2641 50  0000 L CNN
 F 1 "M2" H 6985 2550 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 6885 2595 50  0001 C CNN
 F 3 "~" H 6885 2595 50  0001 C CNN
@@ -314,10 +314,10 @@ $EndComp
 Text Notes 6550 2450 0    50   ~ 0
 M2 PCB Stack Bolt Holes
 $Comp
-L Mechanical:MountingHole H15
+L Mechanical:MountingHole H41
 U 1 1 623F954B
 P 6885 2770
-F 0 "H15" H 6985 2816 50  0000 L CNN
+F 0 "H41" H 6985 2816 50  0000 L CNN
 F 1 "M2" H 6985 2725 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 6885 2770 50  0001 C CNN
 F 3 "~" H 6885 2770 50  0001 C CNN
@@ -325,10 +325,10 @@ F 3 "~" H 6885 2770 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H17
+L Mechanical:MountingHole H44
 U 1 1 623F9763
 P 6885 2945
-F 0 "H17" H 6985 2991 50  0000 L CNN
+F 0 "H44" H 6985 2991 50  0000 L CNN
 F 1 "M2" H 6985 2900 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 6885 2945 50  0001 C CNN
 F 3 "~" H 6885 2945 50  0001 C CNN
@@ -336,10 +336,10 @@ F 3 "~" H 6885 2945 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H19
+L Mechanical:MountingHole H47
 U 1 1 623F9953
 P 6885 3120
-F 0 "H19" H 6985 3166 50  0000 L CNN
+F 0 "H47" H 6985 3166 50  0000 L CNN
 F 1 "M2" H 6985 3075 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 6885 3120 50  0001 C CNN
 F 3 "~" H 6885 3120 50  0001 C CNN
@@ -347,10 +347,10 @@ F 3 "~" H 6885 3120 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H14
+L Mechanical:MountingHole H38
 U 1 1 623FFBF8
 P 7290 2595
-F 0 "H14" H 7390 2641 50  0000 L CNN
+F 0 "H38" H 7390 2641 50  0000 L CNN
 F 1 "M2" H 7390 2550 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7290 2595 50  0001 C CNN
 F 3 "~" H 7290 2595 50  0001 C CNN
@@ -358,10 +358,10 @@ F 3 "~" H 7290 2595 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H16
+L Mechanical:MountingHole H42
 U 1 1 623FFBFE
 P 7290 2770
-F 0 "H16" H 7390 2816 50  0000 L CNN
+F 0 "H42" H 7390 2816 50  0000 L CNN
 F 1 "M2" H 7390 2725 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7290 2770 50  0001 C CNN
 F 3 "~" H 7290 2770 50  0001 C CNN
@@ -369,10 +369,10 @@ F 3 "~" H 7290 2770 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H18
+L Mechanical:MountingHole H45
 U 1 1 623FFC04
 P 7290 2945
-F 0 "H18" H 7390 2991 50  0000 L CNN
+F 0 "H45" H 7390 2991 50  0000 L CNN
 F 1 "M2" H 7390 2900 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7290 2945 50  0001 C CNN
 F 3 "~" H 7290 2945 50  0001 C CNN
@@ -380,10 +380,10 @@ F 3 "~" H 7290 2945 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H20
+L Mechanical:MountingHole H48
 U 1 1 623FFC0A
 P 7290 3120
-F 0 "H20" H 7390 3166 50  0000 L CNN
+F 0 "H48" H 7390 3166 50  0000 L CNN
 F 1 "M2" H 7390 3075 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 7290 3120 50  0001 C CNN
 F 3 "~" H 7290 3120 50  0001 C CNN
@@ -391,65 +391,65 @@ F 3 "~" H 7290 3120 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H32
+L Mechanical:MountingHole H62
 U 1 1 624036A2
-P 6870 4415
-F 0 "H32" H 6970 4461 50  0000 L CNN
-F 1 "M1.2" H 6970 4370 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6870 4415 50  0001 C CNN
-F 3 "~" H 6870 4415 50  0001 C CNN
-	1    6870 4415
+P 6880 4260
+F 0 "H62" H 6980 4306 50  0000 L CNN
+F 1 "M1.2" H 6980 4215 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6880 4260 50  0001 C CNN
+F 3 "~" H 6880 4260 50  0001 C CNN
+	1    6880 4260
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H34
+L Mechanical:MountingHole H67
 U 1 1 624039BA
-P 6870 4580
-F 0 "H34" H 6970 4626 50  0000 L CNN
-F 1 "M1.2" H 6970 4535 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6870 4580 50  0001 C CNN
-F 3 "~" H 6870 4580 50  0001 C CNN
-	1    6870 4580
+P 7085 4945
+F 0 "H67" H 7185 4991 50  0000 L CNN
+F 1 "M1" H 7185 4900 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7085 4945 50  0001 C CNN
+F 3 "~" H 7085 4945 50  0001 C CNN
+	1    7085 4945
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H30
+L Mechanical:MountingHole H61
 U 1 1 62403EB1
-P 6870 4250
-F 0 "H30" H 6970 4296 50  0000 L CNN
-F 1 "M1.2" H 6970 4205 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6870 4250 50  0001 C CNN
-F 3 "~" H 6870 4250 50  0001 C CNN
-	1    6870 4250
+P 6880 4095
+F 0 "H61" H 6980 4141 50  0000 L CNN
+F 1 "M1.2" H 6980 4050 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6880 4095 50  0001 C CNN
+F 3 "~" H 6880 4095 50  0001 C CNN
+	1    6880 4095
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H28
+L Mechanical:MountingHole H59
 U 1 1 62403FF1
-P 6865 4085
-F 0 "H28" H 6965 4131 50  0000 L CNN
-F 1 "M1.2" H 6965 4040 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6865 4085 50  0001 C CNN
-F 3 "~" H 6865 4085 50  0001 C CNN
-	1    6865 4085
+P 6875 3930
+F 0 "H59" H 6975 3976 50  0000 L CNN
+F 1 "M1.2" H 6975 3885 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6875 3930 50  0001 C CNN
+F 3 "~" H 6875 3930 50  0001 C CNN
+	1    6875 3930
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H26
+L Mechanical:MountingHole H69
 U 1 1 624040D0
-P 6865 3920
-F 0 "H26" H 6965 3966 50  0000 L CNN
-F 1 "M1.2" H 6965 3875 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6865 3920 50  0001 C CNN
-F 3 "~" H 6865 3920 50  0001 C CNN
-	1    6865 3920
+P 7090 5110
+F 0 "H69" H 7190 5156 50  0000 L CNN
+F 1 "M1" H 7190 5065 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7090 5110 50  0001 C CNN
+F 3 "~" H 7090 5110 50  0001 C CNN
+	1    7090 5110
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H24
+L Mechanical:MountingHole H55
 U 1 1 62404215
 P 6865 3755
-F 0 "H24" H 6965 3801 50  0000 L CNN
+F 0 "H55" H 6965 3801 50  0000 L CNN
 F 1 "M1.2" H 6965 3710 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6865 3755 50  0001 C CNN
 F 3 "~" H 6865 3755 50  0001 C CNN
@@ -457,10 +457,10 @@ F 3 "~" H 6865 3755 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H22
+L Mechanical:MountingHole H53
 U 1 1 624042CD
 P 6865 3590
-F 0 "H22" H 6965 3636 50  0000 L CNN
+F 0 "H53" H 6965 3636 50  0000 L CNN
 F 1 "M1.2" H 6965 3545 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6865 3590 50  0001 C CNN
 F 3 "~" H 6865 3590 50  0001 C CNN
@@ -468,124 +468,124 @@ F 3 "~" H 6865 3590 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H36
+L Mechanical:MountingHole H68
 U 1 1 62404379
-P 6870 4745
-F 0 "H36" H 6970 4791 50  0000 L CNN
-F 1 "M1.2" H 6970 4700 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6870 4745 50  0001 C CNN
-F 3 "~" H 6870 4745 50  0001 C CNN
-	1    6870 4745
+P 6675 4980
+F 0 "H68" H 6775 5026 50  0000 L CNN
+F 1 "M0.8" H 6775 4935 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_0.8mm" H 6675 4980 50  0001 C CNN
+F 3 "~" H 6675 4980 50  0001 C CNN
+	1    6675 4980
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H33
+L Mechanical:MountingHole H56
 U 1 1 6240984A
-P 7290 4570
-F 0 "H33" H 7390 4616 50  0000 L CNN
-F 1 "M1.2" H 7390 4525 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 4570 50  0001 C CNN
-F 3 "~" H 7290 4570 50  0001 C CNN
-	1    7290 4570
+P 7290 3760
+F 0 "H56" H 7390 3806 50  0000 L CNN
+F 1 "M1.2" H 7390 3715 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 3760 50  0001 C CNN
+F 3 "~" H 7290 3760 50  0001 C CNN
+	1    7290 3760
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H29
+L Mechanical:MountingHole H63
 U 1 1 62409850
-P 7290 4240
-F 0 "H29" H 7390 4286 50  0000 L CNN
-F 1 "M1.2" H 7390 4195 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 4240 50  0001 C CNN
-F 3 "~" H 7290 4240 50  0001 C CNN
-	1    7290 4240
+P 7445 4765
+F 0 "H63" H 7545 4811 50  0000 L CNN
+F 1 "M1" H 7545 4720 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7445 4765 50  0001 C CNN
+F 3 "~" H 7445 4765 50  0001 C CNN
+	1    7445 4765
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H27
+L Mechanical:MountingHole H70
 U 1 1 62409856
-P 7285 4075
-F 0 "H27" H 7385 4121 50  0000 L CNN
-F 1 "M1.2" H 7385 4030 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7285 4075 50  0001 C CNN
-F 3 "~" H 7285 4075 50  0001 C CNN
-	1    7285 4075
+P 7445 5110
+F 0 "H70" H 7545 5156 50  0000 L CNN
+F 1 "M1" H 7545 5065 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7445 5110 50  0001 C CNN
+F 3 "~" H 7445 5110 50  0001 C CNN
+	1    7445 5110
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H25
+L Mechanical:MountingHole H66
 U 1 1 6240985C
-P 7285 3910
-F 0 "H25" H 7385 3956 50  0000 L CNN
-F 1 "M1.2" H 7385 3865 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7285 3910 50  0001 C CNN
-F 3 "~" H 7285 3910 50  0001 C CNN
-	1    7285 3910
+P 7445 4940
+F 0 "H66" H 7545 4986 50  0000 L CNN
+F 1 "M1" H 7545 4895 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7445 4940 50  0001 C CNN
+F 3 "~" H 7445 4940 50  0001 C CNN
+	1    7445 4940
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H23
+L Mechanical:MountingHole H52
 U 1 1 62409862
-P 7285 3745
-F 0 "H23" H 7385 3791 50  0000 L CNN
-F 1 "M1.2" H 7385 3700 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7285 3745 50  0001 C CNN
-F 3 "~" H 7285 3745 50  0001 C CNN
-	1    7285 3745
+P 7285 3585
+F 0 "H52" H 7385 3631 50  0000 L CNN
+F 1 "M1.2" H 7385 3540 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7285 3585 50  0001 C CNN
+F 3 "~" H 7285 3585 50  0001 C CNN
+	1    7285 3585
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H21
+L Mechanical:MountingHole H71
 U 1 1 62409868
-P 7285 3580
-F 0 "H21" H 7385 3626 50  0000 L CNN
-F 1 "M1.2" H 7385 3535 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7285 3580 50  0001 C CNN
-F 3 "~" H 7285 3580 50  0001 C CNN
-	1    7285 3580
+P 7450 5280
+F 0 "H71" H 7550 5326 50  0000 L CNN
+F 1 "M1" H 7550 5235 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7450 5280 50  0001 C CNN
+F 3 "~" H 7450 5280 50  0001 C CNN
+	1    7450 5280
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H35
+L Mechanical:MountingHole H58
 U 1 1 6240986E
-P 7290 4735
-F 0 "H35" H 7390 4781 50  0000 L CNN
-F 1 "M1.2" H 7390 4690 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 4735 50  0001 C CNN
-F 3 "~" H 7290 4735 50  0001 C CNN
-	1    7290 4735
+P 7290 3925
+F 0 "H58" H 7390 3971 50  0000 L CNN
+F 1 "M1.2" H 7390 3880 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 3925 50  0001 C CNN
+F 3 "~" H 7290 3925 50  0001 C CNN
+	1    7290 3925
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H31
+L Mechanical:MountingHole H64
 U 1 1 62409844
-P 7290 4405
-F 0 "H31" H 7390 4451 50  0000 L CNN
-F 1 "M1.2" H 7390 4360 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 4405 50  0001 C CNN
-F 3 "~" H 7290 4405 50  0001 C CNN
-	1    7290 4405
+P 7085 4785
+F 0 "H64" H 7185 4831 50  0000 L CNN
+F 1 "M1" H 7185 4740 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1mm" H 7085 4785 50  0001 C CNN
+F 3 "~" H 7085 4785 50  0001 C CNN
+	1    7085 4785
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H38
+L Mechanical:MountingHole H65
 U 1 1 6242FAD0
-P 6870 4910
-F 0 "H38" H 6970 4956 50  0000 L CNN
-F 1 "M1.2" H 6970 4865 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 6870 4910 50  0001 C CNN
-F 3 "~" H 6870 4910 50  0001 C CNN
-	1    6870 4910
+P 6665 4805
+F 0 "H65" H 6765 4851 50  0000 L CNN
+F 1 "M0.8" H 6765 4760 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_0.8mm" H 6665 4805 50  0001 C CNN
+F 3 "~" H 6665 4805 50  0001 C CNN
+	1    6665 4805
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H37
+L Mechanical:MountingHole H60
 U 1 1 6242FAD6
-P 7290 4900
-F 0 "H37" H 7390 4946 50  0000 L CNN
-F 1 "M1.2" H 7390 4855 50  0000 L CNN
-F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 4900 50  0001 C CNN
-F 3 "~" H 7290 4900 50  0001 C CNN
-	1    7290 4900
+P 7290 4090
+F 0 "H60" H 7390 4136 50  0000 L CNN
+F 1 "M1.2" H 7390 4045 50  0000 L CNN
+F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 7290 4090 50  0001 C CNN
+F 3 "~" H 7290 4090 50  0001 C CNN
+	1    7290 4090
 	1    0    0    -1  
 $EndComp
 Text Notes 6860 3420 0    50   ~ 0
@@ -599,10 +599,10 @@ Chamber Drill Holes
 Text Notes 9695 970  0    50   ~ 0
 Top Plate Drill Holes
 $Comp
-L Mechanical:MountingHole H41
+L Mechanical:MountingHole H3
 U 1 1 6244E023
 P 8455 1495
-F 0 "H41" H 8555 1541 50  0000 L CNN
+F 0 "H3" H 8555 1541 50  0000 L CNN
 F 1 "M2" H 8555 1450 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8455 1495 50  0001 C CNN
 F 3 "~" H 8455 1495 50  0001 C CNN
@@ -612,10 +612,10 @@ $EndComp
 Text Notes 8185 1340 0    50   ~ 0
 M2 PCB Stack Bolt Holes
 $Comp
-L Mechanical:MountingHole H47
+L Mechanical:MountingHole H10
 U 1 1 6244E02A
 P 8455 1670
-F 0 "H47" H 8555 1716 50  0000 L CNN
+F 0 "H10" H 8555 1716 50  0000 L CNN
 F 1 "M2" H 8555 1625 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8455 1670 50  0001 C CNN
 F 3 "~" H 8455 1670 50  0001 C CNN
@@ -623,10 +623,10 @@ F 3 "~" H 8455 1670 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H53
+L Mechanical:MountingHole H17
 U 1 1 6244E030
 P 8455 1845
-F 0 "H53" H 8555 1891 50  0000 L CNN
+F 0 "H17" H 8555 1891 50  0000 L CNN
 F 1 "M2" H 8555 1800 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8455 1845 50  0001 C CNN
 F 3 "~" H 8455 1845 50  0001 C CNN
@@ -634,10 +634,10 @@ F 3 "~" H 8455 1845 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H59
+L Mechanical:MountingHole H25
 U 1 1 6244E036
 P 8455 2020
-F 0 "H59" H 8555 2066 50  0000 L CNN
+F 0 "H25" H 8555 2066 50  0000 L CNN
 F 1 "M2" H 8555 1975 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8455 2020 50  0001 C CNN
 F 3 "~" H 8455 2020 50  0001 C CNN
@@ -645,10 +645,10 @@ F 3 "~" H 8455 2020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H42
+L Mechanical:MountingHole H4
 U 1 1 6244E03C
 P 8860 1495
-F 0 "H42" H 8960 1541 50  0000 L CNN
+F 0 "H4" H 8960 1541 50  0000 L CNN
 F 1 "M2" H 8960 1450 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8860 1495 50  0001 C CNN
 F 3 "~" H 8860 1495 50  0001 C CNN
@@ -656,10 +656,10 @@ F 3 "~" H 8860 1495 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H48
+L Mechanical:MountingHole H11
 U 1 1 6244E042
 P 8860 1670
-F 0 "H48" H 8960 1716 50  0000 L CNN
+F 0 "H11" H 8960 1716 50  0000 L CNN
 F 1 "M2" H 8960 1625 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8860 1670 50  0001 C CNN
 F 3 "~" H 8860 1670 50  0001 C CNN
@@ -667,10 +667,10 @@ F 3 "~" H 8860 1670 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H54
+L Mechanical:MountingHole H18
 U 1 1 6244E048
 P 8860 1845
-F 0 "H54" H 8960 1891 50  0000 L CNN
+F 0 "H18" H 8960 1891 50  0000 L CNN
 F 1 "M2" H 8960 1800 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8860 1845 50  0001 C CNN
 F 3 "~" H 8860 1845 50  0001 C CNN
@@ -678,10 +678,10 @@ F 3 "~" H 8860 1845 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H60
+L Mechanical:MountingHole H26
 U 1 1 6244E04E
 P 8860 2020
-F 0 "H60" H 8960 2066 50  0000 L CNN
+F 0 "H26" H 8960 2066 50  0000 L CNN
 F 1 "M2" H 8960 1975 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 8860 2020 50  0001 C CNN
 F 3 "~" H 8860 2020 50  0001 C CNN
@@ -689,10 +689,10 @@ F 3 "~" H 8860 2020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H43
+L Mechanical:MountingHole H5
 U 1 1 6244FD10
 P 9890 1495
-F 0 "H43" H 9990 1541 50  0000 L CNN
+F 0 "H5" H 9990 1541 50  0000 L CNN
 F 1 "M2" H 9990 1450 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 9890 1495 50  0001 C CNN
 F 3 "~" H 9890 1495 50  0001 C CNN
@@ -702,10 +702,10 @@ $EndComp
 Text Notes 9620 1340 0    50   ~ 0
 M2 PCB Stack Bolt Holes
 $Comp
-L Mechanical:MountingHole H49
+L Mechanical:MountingHole H12
 U 1 1 6244FD17
 P 9890 1670
-F 0 "H49" H 9990 1716 50  0000 L CNN
+F 0 "H12" H 9990 1716 50  0000 L CNN
 F 1 "M2" H 9990 1625 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 9890 1670 50  0001 C CNN
 F 3 "~" H 9890 1670 50  0001 C CNN
@@ -713,10 +713,10 @@ F 3 "~" H 9890 1670 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H55
+L Mechanical:MountingHole H19
 U 1 1 6244FD1D
 P 9890 1845
-F 0 "H55" H 9990 1891 50  0000 L CNN
+F 0 "H19" H 9990 1891 50  0000 L CNN
 F 1 "M2" H 9990 1800 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 9890 1845 50  0001 C CNN
 F 3 "~" H 9890 1845 50  0001 C CNN
@@ -724,10 +724,10 @@ F 3 "~" H 9890 1845 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H61
+L Mechanical:MountingHole H27
 U 1 1 6244FD23
 P 9890 2020
-F 0 "H61" H 9990 2066 50  0000 L CNN
+F 0 "H27" H 9990 2066 50  0000 L CNN
 F 1 "M2" H 9990 1975 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 9890 2020 50  0001 C CNN
 F 3 "~" H 9890 2020 50  0001 C CNN
@@ -735,10 +735,10 @@ F 3 "~" H 9890 2020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H44
+L Mechanical:MountingHole H6
 U 1 1 6244FD29
 P 10295 1495
-F 0 "H44" H 10395 1541 50  0000 L CNN
+F 0 "H6" H 10395 1541 50  0000 L CNN
 F 1 "M2" H 10395 1450 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 10295 1495 50  0001 C CNN
 F 3 "~" H 10295 1495 50  0001 C CNN
@@ -746,10 +746,10 @@ F 3 "~" H 10295 1495 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H50
+L Mechanical:MountingHole H13
 U 1 1 6244FD2F
 P 10295 1670
-F 0 "H50" H 10395 1716 50  0000 L CNN
+F 0 "H13" H 10395 1716 50  0000 L CNN
 F 1 "M2" H 10395 1625 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 10295 1670 50  0001 C CNN
 F 3 "~" H 10295 1670 50  0001 C CNN
@@ -757,10 +757,10 @@ F 3 "~" H 10295 1670 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H56
+L Mechanical:MountingHole H20
 U 1 1 6244FD35
 P 10295 1845
-F 0 "H56" H 10395 1891 50  0000 L CNN
+F 0 "H20" H 10395 1891 50  0000 L CNN
 F 1 "M2" H 10395 1800 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 10295 1845 50  0001 C CNN
 F 3 "~" H 10295 1845 50  0001 C CNN
@@ -768,10 +768,10 @@ F 3 "~" H 10295 1845 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H62
+L Mechanical:MountingHole H28
 U 1 1 6244FD3B
 P 10295 2020
-F 0 "H62" H 10395 2066 50  0000 L CNN
+F 0 "H28" H 10395 2066 50  0000 L CNN
 F 1 "M2" H 10395 1975 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 10295 2020 50  0001 C CNN
 F 3 "~" H 10295 2020 50  0001 C CNN
@@ -779,10 +779,10 @@ F 3 "~" H 10295 2020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H46
+L Mechanical:MountingHole H9
 U 1 1 62452DBB
 P 5120 1590
-F 0 "H46" H 5220 1636 50  0000 L CNN
+F 0 "H9" H 5220 1636 50  0000 L CNN
 F 1 "M1.2" H 5220 1545 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5120 1590 50  0001 C CNN
 F 3 "~" H 5120 1590 50  0001 C CNN
@@ -790,10 +790,10 @@ F 3 "~" H 5120 1590 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H52
+L Mechanical:MountingHole H16
 U 1 1 62452DC1
 P 5120 1755
-F 0 "H52" H 5220 1801 50  0000 L CNN
+F 0 "H16" H 5220 1801 50  0000 L CNN
 F 1 "M1.2" H 5220 1710 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5120 1755 50  0001 C CNN
 F 3 "~" H 5120 1755 50  0001 C CNN
@@ -801,10 +801,10 @@ F 3 "~" H 5120 1755 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H40
+L Mechanical:MountingHole H2
 U 1 1 62452DC7
 P 5120 1425
-F 0 "H40" H 5220 1471 50  0000 L CNN
+F 0 "H2" H 5220 1471 50  0000 L CNN
 F 1 "M1.2" H 5220 1380 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5120 1425 50  0001 C CNN
 F 3 "~" H 5120 1425 50  0001 C CNN
@@ -812,10 +812,10 @@ F 3 "~" H 5120 1425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H58
+L Mechanical:MountingHole H22
 U 1 1 62452DCD
 P 5120 1920
-F 0 "H58" H 5220 1966 50  0000 L CNN
+F 0 "H22" H 5220 1966 50  0000 L CNN
 F 1 "M1.2" H 5220 1875 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5120 1920 50  0001 C CNN
 F 3 "~" H 5120 1920 50  0001 C CNN
@@ -823,10 +823,10 @@ F 3 "~" H 5120 1920 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H51
+L Mechanical:MountingHole H15
 U 1 1 62452DD3
 P 5540 1745
-F 0 "H51" H 5640 1791 50  0000 L CNN
+F 0 "H15" H 5640 1791 50  0000 L CNN
 F 1 "M1.2" H 5640 1700 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5540 1745 50  0001 C CNN
 F 3 "~" H 5540 1745 50  0001 C CNN
@@ -834,10 +834,10 @@ F 3 "~" H 5540 1745 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H39
+L Mechanical:MountingHole H1
 U 1 1 62452DD9
 P 5540 1415
-F 0 "H39" H 5640 1461 50  0000 L CNN
+F 0 "H1" H 5640 1461 50  0000 L CNN
 F 1 "M1.2" H 5640 1370 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5540 1415 50  0001 C CNN
 F 3 "~" H 5540 1415 50  0001 C CNN
@@ -845,10 +845,10 @@ F 3 "~" H 5540 1415 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H57
+L Mechanical:MountingHole H21
 U 1 1 62452DDF
 P 5540 1910
-F 0 "H57" H 5640 1956 50  0000 L CNN
+F 0 "H21" H 5640 1956 50  0000 L CNN
 F 1 "M1.2" H 5640 1865 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5540 1910 50  0001 C CNN
 F 3 "~" H 5540 1910 50  0001 C CNN
@@ -856,10 +856,10 @@ F 3 "~" H 5540 1910 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H45
+L Mechanical:MountingHole H8
 U 1 1 62452DE5
 P 5540 1580
-F 0 "H45" H 5640 1626 50  0000 L CNN
+F 0 "H8" H 5640 1626 50  0000 L CNN
 F 1 "M1.2" H 5640 1535 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5540 1580 50  0001 C CNN
 F 3 "~" H 5540 1580 50  0001 C CNN
@@ -867,10 +867,10 @@ F 3 "~" H 5540 1580 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H63
+L Mechanical:MountingHole H31
 U 1 1 62452DEB
 P 5345 2135
-F 0 "H63" H 5445 2181 50  0000 L CNN
+F 0 "H31" H 5445 2181 50  0000 L CNN
 F 1 "M1.2" H 5445 2090 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:MountingHole_1.2mm" H 5345 2135 50  0001 C CNN
 F 3 "~" H 5345 2135 50  0001 C CNN
@@ -882,10 +882,10 @@ M1.27 Drill holes
 Text Notes 5010 2540 0    50   ~ 0
 Nozzle Drill Holes
 $Comp
-L Mechanical:MountingHole H66
+L Mechanical:MountingHole H50
 U 1 1 62454C20
 P 5130 3350
-F 0 "H66" H 5230 3396 50  0000 L CNN
+F 0 "H50" H 5230 3396 50  0000 L CNN
 F 1 "Nozzle_.5" H 5230 3305 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.5" H 5130 3350 50  0001 C CNN
 F 3 "~" H 5130 3350 50  0001 C CNN
@@ -893,10 +893,10 @@ F 3 "~" H 5130 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H67
+L Mechanical:MountingHole H51
 U 1 1 62456EDE
 P 5130 3510
-F 0 "H67" H 5230 3556 50  0000 L CNN
+F 0 "H51" H 5230 3556 50  0000 L CNN
 F 1 "Nozzle_.4" H 5230 3465 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.4" H 5130 3510 50  0001 C CNN
 F 3 "~" H 5130 3510 50  0001 C CNN
@@ -904,10 +904,10 @@ F 3 "~" H 5130 3510 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H68
+L Mechanical:MountingHole H54
 U 1 1 6245716A
 P 5130 3670
-F 0 "H68" H 5230 3716 50  0000 L CNN
+F 0 "H54" H 5230 3716 50  0000 L CNN
 F 1 "Nozzle_.3" H 5230 3625 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.3" H 5130 3670 50  0001 C CNN
 F 3 "~" H 5130 3670 50  0001 C CNN
@@ -915,10 +915,10 @@ F 3 "~" H 5130 3670 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H69
+L Mechanical:MountingHole H57
 U 1 1 62457585
 P 5130 3830
-F 0 "H69" H 5230 3876 50  0000 L CNN
+F 0 "H57" H 5230 3876 50  0000 L CNN
 F 1 "Nozzle_.25" H 5230 3785 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.25" H 5130 3830 50  0001 C CNN
 F 3 "~" H 5130 3830 50  0001 C CNN
@@ -926,10 +926,10 @@ F 3 "~" H 5130 3830 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H64
+L Mechanical:MountingHole H40
 U 1 1 62457B10
 P 5125 2705
-F 0 "H64" H 5225 2751 50  0000 L CNN
+F 0 "H40" H 5225 2751 50  0000 L CNN
 F 1 "Nozzle_.635-Plated" H 5225 2660 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.635-Plated" H 5125 2705 50  0001 C CNN
 F 3 "~" H 5125 2705 50  0001 C CNN
@@ -946,8 +946,6 @@ Wire Notes Line
 	6295 800  7870 800 
 Wire Notes Line
 	7870 800  7870 5145
-Wire Notes Line
-	7870 5145 6280 5145
 Wire Notes Line
 	6280 5145 6280 810 
 Wire Notes Line
@@ -967,10 +965,10 @@ Wire Notes Line
 Wire Notes Line
 	9505 2420 9505 795 
 $Comp
-L Mechanical:MountingHole H70
+L Mechanical:MountingHole H43
 U 1 1 624B625D
 P 5125 2865
-F 0 "H70" H 5225 2911 50  0000 L CNN
+F 0 "H43" H 5225 2911 50  0000 L CNN
 F 1 "Nozzle_.635-Plated" H 5225 2820 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.635-Plated" H 5125 2865 50  0001 C CNN
 F 3 "~" H 5125 2865 50  0001 C CNN
@@ -978,10 +976,10 @@ F 3 "~" H 5125 2865 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H71
+L Mechanical:MountingHole H46
 U 1 1 624B7966
 P 5125 3025
-F 0 "H71" H 5225 3071 50  0000 L CNN
+F 0 "H46" H 5225 3071 50  0000 L CNN
 F 1 "Nozzle_.635-Plated" H 5225 2980 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.635-Plated" H 5125 3025 50  0001 C CNN
 F 3 "~" H 5125 3025 50  0001 C CNN
@@ -989,10 +987,10 @@ F 3 "~" H 5125 3025 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H72
+L Mechanical:MountingHole H49
 U 1 1 624B9C7C
 P 5125 3185
-F 0 "H72" H 5225 3231 50  0000 L CNN
+F 0 "H49" H 5225 3231 50  0000 L CNN
 F 1 "Nozzle_.635-Plated" H 5225 3140 50  0000 L CNN
 F 2 "Pauls_KiCAD_Libraries:Nozzle_0.635-Plated" H 5125 3185 50  0001 C CNN
 F 3 "~" H 5125 3185 50  0001 C CNN
@@ -1005,4 +1003,12 @@ Wire Notes Line
 	4860 4215 6130 4215
 Wire Notes Line
 	6130 4215 6130 3810
+Text Notes 6775 4610 0    50   ~ 0
+Fuel Inlet Holes
+Wire Notes Line
+	7870 5150 7870 5510
+Wire Notes Line
+	7870 5510 6280 5510
+Wire Notes Line
+	6280 5510 6280 5150
 $EndSCHEMATC
