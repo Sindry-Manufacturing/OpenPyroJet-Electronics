@@ -1,0 +1,29 @@
+
+This directory contains KiCAD 5.1.x design files for a set of PCB's that make up the OpenPyroJet Gen 3.1 printhead. 
+ 
+The directory could be better named as Printhead (as opposed to Nozzle), but I believe thats hard to do once a KiCAD project has been started?
+
+
+Printhead PCB Versions:
+-------------
+
+Gen3.1b:
+Production: JLCPCB, 2 Layer, 1.6mm, Green
+Date:  2022-0330
+
+* change the Nozzle PCB screw holes from M1.27 to 0.635mm
+* label each PCB with a letter, ie: A, B, C & D.  This will make referencing them easier.
+
+
+Gen3.1a:
+Production: JLCPCB, 2 Layer, 1.6mm, Green
+Date:  2022-03-29
+
+* swapped the Connector PCB 1.27mm inlet holes for 6 x 1mm and 2 x 0.8mm holes.  This gives thicker filament pads (0.4mm wide).
+
+
+Gen3.1:
+Production: JLCPCB, 2 Layer, 1.6mm, Green
+Date:  2022-03-27
+
+* initial version, with one of PCB PCB produced
