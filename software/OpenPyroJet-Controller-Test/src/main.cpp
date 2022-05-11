@@ -3,13 +3,17 @@
 * an example Test program to select pulse length and nozzle number
 * then fire the nozzle
 *
-* Parkview 2022-04-24
+* Parkview 2022-04-24 (I am NOT a software guy)
 * MIT License - Open Source Software
 *
+* See: https://github.com/Sindry-Manufacturing/OpenPyrojet-Jetpack  ; for much more complete software solution
 *
 List of todo's:
   * TODO: change Rotary Encoder over to proper number tracking!
   * TODO: setup power LED with PWM so we can adjust brightness
+  * TODO: add in ADC routine to record VSW current usage during
+      firing a nozzle.
+  * TODO: Be great to show the data as a graph on the OLED screen
   * DONE: get menu working correctly on screen
   * DONE: get nozzles firing with set paramemters
 */
@@ -19,6 +23,7 @@ List of todo's:
 #include "SSD1306Wire.h"
 #include "FastLED.h"
 #include "AiEsp32RotaryEncoder.h"
+#include "main.h"
 
 #define OLED_DISPLAY true    // Enable OLED Display
 #define OLED_DISPLAY_SSD1306 // OLED Display Type: SSD1306(OLED_DISPLAY_SSD1306) / SH1106(OLED_DISPLAY_SH1106), comment this line out to disable oled
@@ -46,9 +51,12 @@ List of todo's:
 #define nozzle5 18
 #define nozzle6 19
 #define nozzle7 23
-int nozzles[8] = {14,13,4,16,17,18,19,23};
-#define powerLEDbrightness 50 // set Green Power LED to 50% brightness
+int nozzles[8] = {14, 13, 4, 16, 17, 18, 19, 23}; // list of nozzle GPIO firing pins
+#define powerLEDbrightness 50                     // set Green Power LED to 50% brightness
 
+#define ADC121Addr 0x51 // equiv: 0x51 or 81D  Tested via i2CScanner
+
+const uint32_t FREQ = 400000;      // i2C clock Frequencies: 100000; 400000; 1700000; 3400000
 const uint8_t I2C_SDA_PIN = 21;    // ESP32 WROOM32 i2c SDA Pin
 const uint8_t I2C_SCL_PIN = 22;    // ESP32 WROOM32 i2c SCL Pin
 const uint8_t DISPLAY_WIDTH = 128; // OLED display pixel width
@@ -64,9 +72,101 @@ CRGB leds[numRGBLED];
 
 AiEsp32RotaryEncoder rotaryEncoder = AiEsp32RotaryEncoder(ROTARY_ENCODER_A_PIN, ROTARY_ENCODER_B_PIN, ROTARY_ENCODER_BUTTON_PIN, ROTARY_ENCODER_VCC_PIN, ROTARY_ENCODER_STEPS);
 
+// MCA1101_ADC adc(uint8_t sensor_addr);
+//#define read16(reg, val) readFromRegAddr(_addr, reg, val, 2 )
+//#define write8(reg, val) writeToRegAddr(_addr, reg, val, 1)
+
 #ifdef OLED_DISPLAY_SSD1306
 SSD1306Wire display(0x3c, I2C_SDA_PIN, I2C_SCL_PIN);
 #endif
+
+/**
+ * Generic I2C Read function
+ *
+ * @param devAddr I2C Device address
+ * @param reg Register address
+ * @param val pointer to byte array to read into
+ * @param length number of bytes to read
+ *
+ * @return 0 on success, other on failure
+ */
+
+int readFromRegAddr(uint8_t devAddr, uint8_t reg, void *val, size_t length)
+// int readFromRegAddr(uint8_t devAddr, uint8_t reg, void *val, size_t length)
+// int readFromRegAddr(uint8_t devAddr, uint8_t reg, void *val, size_t length, endian_e endianness)
+{
+  //  list out variables that have been passed to function:
+  uint8_t *byteArray = (uint8_t *)val;
+  int ret;
+  int readData = 1;
+  uint32_t i2cFreq = 0;
+  Wire.beginTransmission(devAddr); // select the ADC121 IC
+  if (Wire.write(reg) < 1)         // select the conversion register: 0
+  {
+    Serial.println("RETURN -1");
+    return -1;
+  }
+  if ((ret = Wire.endTransmission(false)) != 0)
+  {
+    Serial.println("RETURN RET");
+    return ret;
+  }
+  if (byteArray == NULL || length == 0)
+  {
+    Serial.println("RETURN 0");
+    return 0;
+  }
+  digitalWrite(33, 1); // reading data, so pulse scope Sync GPIO: 33
+  Wire.requestFrom(devAddr, (uint8_t)length);
+  while (Wire.available() > 0 && readData < length)
+  {
+    byteArray[readData] = Wire.read();
+    // byteArray[endianness == BIG_ENDIAN ? readData : length - 1 - readData] = Wire.read();
+    readData--;
+  }
+  digitalWrite(33, 0); // finished reading data, turn off pulse scope Sync GPIO:33
+  if ((ret = Wire.endTransmission(true)) != 0)
+  {
+    return ret;
+  }
+  return 0;
+}
+
+/**
+ * Generic I2C Write function
+ *
+ * @param devAddr I2C Device address
+ * @param reg Register address
+ * @param val pointer to byte array to write from
+ * @param length number of bytes to write
+ *
+ * @return 0 on success, other on failure
+ */
+
+int writeToRegAddr(uint8_t devAddr, uint8_t reg, void *val, size_t length)
+// int writeToRegAddr(uint8_t devAddr, uint8_t reg, void *val, size_t length, endian_e endianness)
+{
+  uint8_t *byteArray = (uint8_t *)val;
+  int ret;
+  Wire.beginTransmission(devAddr);
+  if (Wire.write(reg) < 1)
+  {
+    return -1;
+  }
+  for (int i = 0; i < length; i++)
+  {
+    if (Wire.write(byteArray[i]) < 1)
+    {
+      // if (Wire.write(byteArray[endianness == 0 ? i : length - 1 - i]) < 1) {
+      return -1;
+    }
+  }
+  if ((ret = Wire.endTransmission()) != 0)
+  {
+    return ret;
+  }
+  return 0;
+}
 
 void blinkPowerLED()
 {
@@ -81,16 +181,16 @@ void SoundBuzzer()
 {
   //  sound the buzzer
   ledcWrite(0, 127); // turn on buzzer
-  Serial.println("Buzzer On");
+  // Serial.println("Buzzer On");
   delay(WAIT);
-  Serial.println("Buzzer Off");
+  // Serial.println("Buzzer Off");
   ledcWrite(0, 0); // turn buzzer off
 }
 
 void blinkRGB()
 {
   // cycle the WS2812 RGB LEDS to show they are all working ok
-  //Serial.println("Cycle RGB LEDs On");
+  // Serial.println("Cycle RGB LEDs On");
   leds[0] = CRGB::Red;
   FastLED.show();
   delay(300);
@@ -119,7 +219,7 @@ void OLED_Header()
 
 void displayText(int line, char *textline)
 {
-  // update menu with new data: line 1=
+  // update menu with new data, Line one starts 12 pixels down
   display.clear();
   OLED_Header();
   display.drawString(2, line * 12, textline);
@@ -161,6 +261,16 @@ void IRAM_ATTR readEncoderISR()
   rotaryEncoder.readEncoder_ISR();
 }
 
+// Read value from converter
+float read_current()
+{
+  uint16_t raw = 0;
+  readFromRegAddr(ADC121Addr, ADC121_CONV_REG, &raw, 2);
+  // Wire.setClock(100000);
+  return ((float)raw) / ADC121_MAX_VAL * ADC121_REF_V;
+  // return ((float)raw);
+}
+
 void setup()
 {
   // put your setup code here, to run once:
@@ -178,6 +288,7 @@ void setup()
   pinMode(nozzle5, OUTPUT);
   pinMode(nozzle6, OUTPUT);
   pinMode(nozzle7, OUTPUT);
+  pinMode(33, OUTPUT);
   digitalWrite(nozzle0, LOW);
   digitalWrite(nozzle1, LOW);
   digitalWrite(nozzle2, LOW);
@@ -186,17 +297,22 @@ void setup()
   digitalWrite(nozzle5, LOW);
   digitalWrite(nozzle6, LOW);
   digitalWrite(nozzle7, LOW);
+  digitalWrite(33, LOW);
   digitalWrite(PowerLEDPin, HIGH);
   blinkPowerLED();
   Serial.begin(115200);
   Serial.println("");
   Serial.println("Serial setup done!");
-  Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN); //(SDA, SCL)
+  Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN, FREQ); //(SDA, SCL): uint8_t slaveAddr, int sda=-1, int scl=-1, uint32_t frequency=0
+  Serial.println("Wire Begin done!");
   FastLED.addLeds<LED_TYPE, RGBLEDPin, COLOR_ORDER>(leds, numRGBLED).setCorrection(TypicalLEDStrip);
   FastLED.setBrightness(BRIGHTNESS);
+  Serial.println("Fastwire finished done!");
   blinkRGB();
 #if OLED_DISPLAY
+  Serial.println("display init start!");
   display.init();
+  Serial.println("display init finished done!");
   display.flipScreenVertically(); // setup depends on how the PCB is mounted
   display.setContrast(255);
   display.setFont(ArialMT_Plain_10);
@@ -211,9 +327,23 @@ void setup()
   rotaryEncoder.setBoundaries(0, 255, circleValues); // minValue, maxValue, circleValues true|false (when max go to min and vice versa)
   rotaryEncoder.setEncoderValue(1);                  // set the starting number
   rotaryEncoder.setAcceleration(150);                // Acceleration 2-255; 0 or 1 disables Accel.
+
   // set RGB LED to State 1
-  leds[0] = CHSV(96, 255, BRIGHTNESS);               // set to Green
+  leds[0] = CHSV(96, 255, BRIGHTNESS); // set to Green
   FastLED.show();
+  // init the ADC routines
+  uint8_t buf = 0x00;
+  buf = ADC121_CONFIG_CYCLE_32 & ADC121_CONFIG_CYCLE_MASK; // make sure to set Auto conversion
+  Serial.println("Buffer: ");
+  Serial.println(buf);
+  writeToRegAddr(ADC121Addr, ADC121_CONFIG_REG, &buf, 1);
+  //  ADC init finished
+
+  Serial.println("ADC Setup completed!");
+  Serial.print("Current: ");
+  Serial.println(read_current());
+
+  SoundBuzzer();
 }
 
 void loop()
@@ -231,9 +361,41 @@ void loop()
   {
     // fire current nozzle for set number of mSec
     blinkPowerLED();
+    Serial.print("i2C Clock Speed: ");
+    Serial.println(Wire.getClock());
+    float curOneA = read_current();
+    float curOneB = read_current();
     digitalWrite(nozzles[nozzleNumber], 1);
+    delayMicroseconds(20);
+    uint32_t startTime = micros();
+    float curOne = read_current();
+    uint32_t endTime = micros();
+    float curTwo = read_current();
+    float curThr = read_current();
+    // Serial.println(read_current());
     delay(pulseLength);
     digitalWrite(nozzles[nozzleNumber], 0);
+    delayMicroseconds(20);
+    float curOneC = read_current();
+    float curOneD = read_current();
+    Serial.print("Current: ");
+    Serial.println(curOneA);
+    Serial.print("Current: ");
+    Serial.println(curOneB);
+    Serial.println("----");
+    Serial.print("Current: ");
+    Serial.println(curOne);
+    Serial.print("Current: ");
+    Serial.println(curTwo);
+    Serial.print("Current: ");
+    Serial.println(curThr);
+    Serial.println("----");
+    Serial.print("Current: ");
+    Serial.println(curOneC);
+    Serial.print("Current: ");
+    Serial.println(curOneD);
+    Serial.print("MicroSeconds to read sensor: ");
+    Serial.println(endTime - startTime);
     SoundBuzzer();
     Serial.print("Just Fired Nozzle: ");
     Serial.print(nozzleNumber);
