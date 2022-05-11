@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title "Open-PyroJet"
-Date "2022-03-22"
-Rev "0.5c2"
+Title "Open-PyroJet Controller"
+Date "2022-05-09"
+Rev "0.6a"
 Comp "OPJ"
 Comment1 "PRL"
 Comment2 ""
@@ -74,8 +74,8 @@ L power:GND #PWR?
 U 1 1 6234079F
 P 2570 4110
 AR Path="/6231FCB3/6234079F" Ref="#PWR?"  Part="1" 
-AR Path="/6234079F" Ref="#PWR021"  Part="1" 
-F 0 "#PWR021" H 2570 3860 50  0001 C CNN
+AR Path="/6234079F" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 2570 3860 50  0001 C CNN
 F 1 "GND" H 2575 3937 50  0000 C CNN
 F 2 "" H 2570 4110 50  0001 C CNN
 F 3 "" H 2570 4110 50  0001 C CNN
@@ -135,8 +135,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 623407BC
 P 9170 2830
 AR Path="/6231FCB3/623407BC" Ref="#PWR?"  Part="1" 
-AR Path="/623407BC" Ref="#PWR012"  Part="1" 
-F 0 "#PWR012" H 9170 2680 50  0001 C CNN
+AR Path="/623407BC" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 9170 2680 50  0001 C CNN
 F 1 "+3.3V" H 9185 3003 50  0000 C CNN
 F 2 "" H 9170 2830 50  0001 C CNN
 F 3 "" H 9170 2830 50  0001 C CNN
@@ -212,8 +212,8 @@ L power:GND #PWR?
 U 1 1 623407E2
 P 10000 3655
 AR Path="/6231FCB3/623407E2" Ref="#PWR?"  Part="1" 
-AR Path="/623407E2" Ref="#PWR019"  Part="1" 
-F 0 "#PWR019" H 10000 3405 50  0001 C CNN
+AR Path="/623407E2" Ref="#PWR021"  Part="1" 
+F 0 "#PWR021" H 10000 3405 50  0001 C CNN
 F 1 "GND" H 10005 3482 50  0000 C CNN
 F 2 "" H 10000 3655 50  0001 C CNN
 F 3 "" H 10000 3655 50  0001 C CNN
@@ -225,8 +225,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 623407E8
 P 10000 2880
 AR Path="/6231FCB3/623407E8" Ref="#PWR?"  Part="1" 
-AR Path="/623407E8" Ref="#PWR014"  Part="1" 
-F 0 "#PWR014" H 10000 2730 50  0001 C CNN
+AR Path="/623407E8" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 10000 2730 50  0001 C CNN
 F 1 "+3.3V" H 10015 3053 50  0000 C CNN
 F 2 "" H 10000 2880 50  0001 C CNN
 F 3 "" H 10000 2880 50  0001 C CNN
@@ -269,18 +269,12 @@ Wire Wire Line
 	3245 1675 3170 1675
 Wire Wire Line
 	3245 1875 3170 1875
-NoConn ~ 3170 1975
-NoConn ~ 3170 2375
 Text Notes 2125 3790 0    50   ~ 0
 Input Only:\nPin4 - GPIO36\nPin5 - GPIO39\nPin6 - GPIO34\nPin7 - GPIO35\nPin8 - GPIO39\n
 Text Notes 2100 2080 0    50   ~ 0
 Strapping Pins:\n0, 2, 5, 12, 15
 Text Notes 2445 2735 0    50   ~ 0
 ADC1 Pins:\nGPIO36\nGPIO39\nGPIO34\nGPIO35\nGPIO32\nGPIO33
-Text GLabel 3245 2875 2    50   Input ~ 0
-SDA
-Text GLabel 3245 2975 2    50   Input ~ 0
-SCL
 Wire Wire Line
 	3245 2875 3170 2875
 Wire Wire Line
@@ -294,8 +288,8 @@ L Connector:Conn_01x04_Male J?
 U 1 1 6234080E
 P 7705 1470
 AR Path="/6231FCB3/6234080E" Ref="J?"  Part="1" 
-AR Path="/6234080E" Ref="J2"  Part="1" 
-F 0 "J2" H 7677 1352 50  0000 R CNN
+AR Path="/6234080E" Ref="J4"  Part="1" 
+F 0 "J4" H 7677 1352 50  0000 R CNN
 F 1 "OLED Screen" H 7865 1150 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7705 1470 50  0001 C CNN
 F 3 "~" H 7705 1470 50  0001 C CNN
@@ -313,8 +307,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 62340818
 P 7955 1155
 AR Path="/6231FCB3/62340818" Ref="#PWR?"  Part="1" 
-AR Path="/62340818" Ref="#PWR04"  Part="1" 
-F 0 "#PWR04" H 7955 1005 50  0001 C CNN
+AR Path="/62340818" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 7955 1005 50  0001 C CNN
 F 1 "+3.3V" H 7970 1328 50  0000 C CNN
 F 2 "" H 7955 1155 50  0001 C CNN
 F 3 "" H 7955 1155 50  0001 C CNN
@@ -326,8 +320,8 @@ L power:GND #PWR?
 U 1 1 6234081E
 P 7955 1710
 AR Path="/6231FCB3/6234081E" Ref="#PWR?"  Part="1" 
-AR Path="/6234081E" Ref="#PWR07"  Part="1" 
-F 0 "#PWR07" H 7955 1460 50  0001 C CNN
+AR Path="/6234081E" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 7955 1460 50  0001 C CNN
 F 1 "GND" H 7960 1537 50  0000 C CNN
 F 2 "" H 7955 1710 50  0001 C CNN
 F 3 "" H 7955 1710 50  0001 C CNN
@@ -369,8 +363,8 @@ L power:GND #PWR?
 U 1 1 62340832
 P 9170 3605
 AR Path="/6231FCB3/62340832" Ref="#PWR?"  Part="1" 
-AR Path="/62340832" Ref="#PWR018"  Part="1" 
-F 0 "#PWR018" H 9170 3355 50  0001 C CNN
+AR Path="/62340832" Ref="#PWR020"  Part="1" 
+F 0 "#PWR020" H 9170 3355 50  0001 C CNN
 F 1 "GND" H 9175 3432 50  0000 C CNN
 F 2 "" H 9170 3605 50  0001 C CNN
 F 3 "" H 9170 3605 50  0001 C CNN
@@ -382,8 +376,8 @@ L power:GND #PWR?
 U 1 1 62340838
 P 7410 3415
 AR Path="/6231FCB3/62340838" Ref="#PWR?"  Part="1" 
-AR Path="/62340838" Ref="#PWR015"  Part="1" 
-F 0 "#PWR015" H 7410 3165 50  0001 C CNN
+AR Path="/62340838" Ref="#PWR017"  Part="1" 
+F 0 "#PWR017" H 7410 3165 50  0001 C CNN
 F 1 "GND" H 7415 3242 50  0000 C CNN
 F 2 "" H 7410 3415 50  0001 C CNN
 F 3 "" H 7410 3415 50  0001 C CNN
@@ -527,8 +521,8 @@ L power:GND #PWR?
 U 1 1 6234087E
 P 9930 1755
 AR Path="/6231FCB3/6234087E" Ref="#PWR?"  Part="1" 
-AR Path="/6234087E" Ref="#PWR08"  Part="1" 
-F 0 "#PWR08" H 9930 1505 50  0001 C CNN
+AR Path="/6234087E" Ref="#PWR010"  Part="1" 
+F 0 "#PWR010" H 9930 1505 50  0001 C CNN
 F 1 "GND" H 9935 1582 50  0000 C CNN
 F 2 "" H 9930 1755 50  0001 C CNN
 F 3 "" H 9930 1755 50  0001 C CNN
@@ -550,8 +544,8 @@ L power:GND #PWR?
 U 1 1 62340889
 P 9215 1815
 AR Path="/6231FCB3/62340889" Ref="#PWR?"  Part="1" 
-AR Path="/62340889" Ref="#PWR09"  Part="1" 
-F 0 "#PWR09" H 9215 1565 50  0001 C CNN
+AR Path="/62340889" Ref="#PWR011"  Part="1" 
+F 0 "#PWR011" H 9215 1565 50  0001 C CNN
 F 1 "GND" H 9220 1642 50  0000 C CNN
 F 2 "" H 9215 1815 50  0001 C CNN
 F 3 "" H 9215 1815 50  0001 C CNN
@@ -622,8 +616,8 @@ L power:GND #PWR?
 U 1 1 623408AD
 P 1820 2255
 AR Path="/6231FCB3/623408AD" Ref="#PWR?"  Part="1" 
-AR Path="/623408AD" Ref="#PWR010"  Part="1" 
-F 0 "#PWR010" H 1820 2005 50  0001 C CNN
+AR Path="/623408AD" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 1820 2005 50  0001 C CNN
 F 1 "GND" H 1825 2082 50  0000 C CNN
 F 2 "" H 1820 2255 50  0001 C CNN
 F 3 "" H 1820 2255 50  0001 C CNN
@@ -671,8 +665,8 @@ L power:GND #PWR?
 U 1 1 623408C7
 P 3225 4065
 AR Path="/6231FCB3/623408C7" Ref="#PWR?"  Part="1" 
-AR Path="/623408C7" Ref="#PWR020"  Part="1" 
-F 0 "#PWR020" H 3225 3815 50  0001 C CNN
+AR Path="/623408C7" Ref="#PWR022"  Part="1" 
+F 0 "#PWR022" H 3225 3815 50  0001 C CNN
 F 1 "GND" H 3230 3892 50  0000 C CNN
 F 2 "" H 3225 4065 50  0001 C CNN
 F 3 "" H 3225 4065 50  0001 C CNN
@@ -684,8 +678,8 @@ L power:GND #PWR?
 U 1 1 623408CD
 P 6485 3545
 AR Path="/6231FCB3/623408CD" Ref="#PWR?"  Part="1" 
-AR Path="/623408CD" Ref="#PWR016"  Part="1" 
-F 0 "#PWR016" H 6485 3295 50  0001 C CNN
+AR Path="/623408CD" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 6485 3295 50  0001 C CNN
 F 1 "GND" H 6605 3440 50  0000 C CNN
 F 2 "" H 6485 3545 50  0001 C CNN
 F 3 "" H 6485 3545 50  0001 C CNN
@@ -701,8 +695,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 623408D5
 P 6485 2870
 AR Path="/6231FCB3/623408D5" Ref="#PWR?"  Part="1" 
-AR Path="/623408D5" Ref="#PWR013"  Part="1" 
-F 0 "#PWR013" H 6485 2720 50  0001 C CNN
+AR Path="/623408D5" Ref="#PWR015"  Part="1" 
+F 0 "#PWR015" H 6485 2720 50  0001 C CNN
 F 1 "+3.3V" H 6500 3043 50  0000 C CNN
 F 2 "" H 6485 2870 50  0001 C CNN
 F 3 "" H 6485 2870 50  0001 C CNN
@@ -738,8 +732,8 @@ L power:GND #PWR?
 U 1 1 623408E7
 P 6695 1595
 AR Path="/6231FCB3/623408E7" Ref="#PWR?"  Part="1" 
-AR Path="/623408E7" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 6695 1345 50  0001 C CNN
+AR Path="/623408E7" Ref="#PWR07"  Part="1" 
+F 0 "#PWR07" H 6695 1345 50  0001 C CNN
 F 1 "GND" H 6700 1422 50  0000 C CNN
 F 2 "" H 6695 1595 50  0001 C CNN
 F 3 "" H 6695 1595 50  0001 C CNN
@@ -824,12 +818,6 @@ Wire Wire Line
 	3245 3475 3170 3475
 Text Notes 970  4915 0    50   ~ 0
 Design Philosophy:\n* over engineered to enable experimentation and exploration of a filament and nozzle limits\n* cost is not a big driver for this design, but it has been taken into account\n* not much thought on mounting issues, but this version will have to be mounted close to the printhead
-Text Notes 3635 3695 0    50   ~ 0
-1 easy to use spare RO GPIO
-Text Notes 3600 1990 0    50   ~ 0
-2 extra spare strapping pin GPIO
-Wire Wire Line
-	3245 3275 3170 3275
 Wire Wire Line
 	3245 3175 3170 3175
 $Comp
@@ -917,8 +905,8 @@ L power:GND #PWR?
 U 1 1 62340943
 P 9585 5620
 AR Path="/6231FCB3/62340943" Ref="#PWR?"  Part="1" 
-AR Path="/62340943" Ref="#PWR025"  Part="1" 
-F 0 "#PWR025" H 9585 5370 50  0001 C CNN
+AR Path="/62340943" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 9585 5370 50  0001 C CNN
 F 1 "GND" H 9590 5447 50  0000 C CNN
 F 2 "" H 9585 5620 50  0001 C CNN
 F 3 "" H 9585 5620 50  0001 C CNN
@@ -945,8 +933,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 62340951
 P 9585 4530
 AR Path="/6231FCB3/62340951" Ref="#PWR?"  Part="1" 
-AR Path="/62340951" Ref="#PWR022"  Part="1" 
-F 0 "#PWR022" H 9585 4380 50  0001 C CNN
+AR Path="/62340951" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 9585 4380 50  0001 C CNN
 F 1 "+3.3V" H 9600 4703 50  0000 C CNN
 F 2 "" H 9585 4530 50  0001 C CNN
 F 3 "" H 9585 4530 50  0001 C CNN
@@ -983,8 +971,8 @@ L power:GND #PWR?
 U 1 1 62340965
 P 9350 5045
 AR Path="/6231FCB3/62340965" Ref="#PWR?"  Part="1" 
-AR Path="/62340965" Ref="#PWR024"  Part="1" 
-F 0 "#PWR024" H 9350 4795 50  0001 C CNN
+AR Path="/62340965" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 9350 4795 50  0001 C CNN
 F 1 "GND" H 9235 4945 50  0000 C CNN
 F 2 "" H 9350 5045 50  0001 C CNN
 F 3 "" H 9350 5045 50  0001 C CNN
@@ -1066,68 +1054,53 @@ Wire Notes Line
 	7105 4135 8255 4135
 Text Notes 3615 4000 0    50   ~ 0
 filtering cap\nif needed. Place \nclose to ADC
-$Comp
-L Connector_Generic:Conn_02x10_Odd_Even J3
-U 1 1 623527A8
-P 5815 6860
-F 0 "J3" H 5865 7370 50  0000 C CNN
-F 1 "2 x 10 Pinheader" H 5725 6155 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x10_P2.54mm_Vertical" H 5815 6860 50  0001 C CNN
-F 3 "~" H 5815 6860 50  0001 C CNN
-	1    5815 6860
-	1    0    0    -1  
-$EndComp
-Text GLabel 6180 6560 2    50   Input ~ 0
+Text GLabel 5725 6405 2    50   Input ~ 0
 PH1
-Text GLabel 6180 6660 2    50   Input ~ 0
+Text GLabel 5725 6505 2    50   Input ~ 0
 PH2
-Text GLabel 6180 6760 2    50   Input ~ 0
+Text GLabel 5725 6605 2    50   Input ~ 0
 PH3
-Text GLabel 6180 6860 2    50   Input ~ 0
+Text GLabel 5725 6705 2    50   Input ~ 0
 PH4
-Text GLabel 6180 6960 2    50   Input ~ 0
+Text GLabel 5725 6805 2    50   Input ~ 0
 PH5
-Text GLabel 6180 7060 2    50   Input ~ 0
+Text GLabel 5725 6905 2    50   Input ~ 0
 PH6
-Text GLabel 6180 6460 2    50   Input ~ 0
+Text GLabel 5725 6305 2    50   Input ~ 0
 PH0
 Wire Wire Line
-	6115 6460 6180 6460
+	5660 6305 5725 6305
 Wire Wire Line
-	6115 6560 6180 6560
+	5660 6405 5725 6405
 Wire Wire Line
-	6115 6660 6180 6660
+	5660 6505 5725 6505
 Wire Wire Line
-	6115 6760 6180 6760
+	5660 6605 5725 6605
 Wire Wire Line
-	6115 6860 6180 6860
+	5660 6705 5725 6705
 Wire Wire Line
-	6115 6960 6180 6960
+	5660 6805 5725 6805
 Wire Wire Line
-	6115 7060 6180 7060
+	5660 6905 5725 6905
 Wire Wire Line
-	6115 7160 6180 7160
+	5660 7005 5725 7005
 Wire Wire Line
-	6115 7260 6180 7260
+	5660 7105 5725 7105
 Wire Wire Line
-	6115 7360 6180 7360
-Text GLabel 6180 7160 2    50   Input ~ 0
+	5660 7205 5725 7205
+Text GLabel 5725 7005 2    50   Input ~ 0
 PH7
-Text GLabel 6180 7360 2    50   Input ~ 0
-SDA
-Text GLabel 6180 7260 2    50   Input ~ 0
-SCL
 $Comp
 L power:GND #PWR?
 U 1 1 62389F3D
-P 5555 7385
+P 5100 7405
 AR Path="/6231FCB3/62389F3D" Ref="#PWR?"  Part="1" 
-AR Path="/62389F3D" Ref="#PWR030"  Part="1" 
-F 0 "#PWR030" H 5555 7135 50  0001 C CNN
-F 1 "GND" H 5675 7280 50  0000 C CNN
-F 2 "" H 5555 7385 50  0001 C CNN
-F 3 "" H 5555 7385 50  0001 C CNN
-	1    5555 7385
+AR Path="/62389F3D" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 5100 7155 50  0001 C CNN
+F 1 "GND" H 5220 7300 50  0000 C CNN
+F 2 "" H 5100 7405 50  0001 C CNN
+F 3 "" H 5100 7405 50  0001 C CNN
+	1    5100 7405
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1135,8 +1108,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 6238F005
 P 4180 6590
 AR Path="/6231FCB3/6238F005" Ref="#PWR?"  Part="1" 
-AR Path="/6238F005" Ref="#PWR027"  Part="1" 
-F 0 "#PWR027" H 4180 6440 50  0001 C CNN
+AR Path="/6238F005" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 4180 6440 50  0001 C CNN
 F 1 "+3.3V" H 4240 6725 50  0000 C CNN
 F 2 "" H 4180 6590 50  0001 C CNN
 F 3 "" H 4180 6590 50  0001 C CNN
@@ -1144,56 +1117,53 @@ F 3 "" H 4180 6590 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5615 7160 5555 7160
+	5160 7005 5100 7005
 Wire Wire Line
-	5555 7160 5555 7260
+	5100 7005 5100 7105
 Wire Wire Line
-	5615 7360 5555 7360
-Connection ~ 5555 7360
+	5160 7205 5100 7205
+Connection ~ 5100 7205
 Wire Wire Line
-	5555 7360 5555 7385
+	5160 7105 5100 7105
+Connection ~ 5100 7105
 Wire Wire Line
-	5615 7260 5555 7260
-Connection ~ 5555 7260
+	5100 7105 5100 7205
 Wire Wire Line
-	5555 7260 5555 7360
+	5160 6905 5025 6905
 Wire Wire Line
-	5615 7060 5480 7060
+	5025 6705 5160 6705
 Wire Wire Line
-	5480 6860 5615 6860
+	5025 6705 5025 6905
 Wire Wire Line
-	5480 6860 5480 7060
+	5025 6705 5025 6660
+Connection ~ 5025 6705
 Wire Wire Line
-	5480 6860 5480 6815
-Connection ~ 5480 6860
+	5100 7005 5100 6805
 Wire Wire Line
-	5555 7160 5555 6960
+	5100 6805 5160 6805
+Connection ~ 5100 7005
 Wire Wire Line
-	5555 6960 5615 6960
-Connection ~ 5555 7160
+	5100 6505 5160 6505
 Wire Wire Line
-	5555 6660 5615 6660
+	5160 6605 5100 6605
+Connection ~ 5100 6605
 Wire Wire Line
-	5615 6760 5555 6760
-Connection ~ 5555 6760
+	5100 6605 5100 6505
 Wire Wire Line
-	5555 6760 5555 6660
+	5100 6305 5160 6305
 Wire Wire Line
-	5555 6460 5615 6460
+	5160 6405 5100 6405
+Connection ~ 5100 6405
 Wire Wire Line
-	5615 6560 5555 6560
-Connection ~ 5555 6560
+	5100 6405 5100 6305
 Wire Wire Line
-	5555 6560 5555 6460
+	5100 6605 5100 6805
+Connection ~ 5100 6805
 Wire Wire Line
-	5555 6760 5555 6960
-Connection ~ 5555 6960
-Wire Wire Line
-	5555 6560 5555 6660
-Connection ~ 5555 6660
-Text Notes 5320 6275 0    50   ~ 0
+	5100 6405 5100 6505
+Connection ~ 5100 6505
+Text Notes 4865 6120 0    50   ~ 0
 To Printhead-Driver Board
-NoConn ~ 3170 3675
 $Comp
 L Device:C_Small C?
 U 1 1 6242C2C8
@@ -1215,7 +1185,7 @@ P 2730 1150
 AR Path="/6231FCB3/6242C2CF" Ref="C?"  Part="1" 
 AR Path="/6242C2CF" Ref="C2"  Part="1" 
 F 0 "C2" V 2790 1205 50  0000 L CNN
-F 1 "100nF" V 2835 900 50  0000 L CNN
+F 1 "100nF" V 2850 985 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2730 1150 50  0001 C CNN
 F 3 "~" H 2730 1150 50  0001 C CNN
 F 4 "16V Ceramic" H 2730 1150 50  0001 C CNN "Description"
@@ -1225,15 +1195,15 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 6242C2D5
-P 2905 1150
+P 2990 1165
 AR Path="/6231FCB3/6242C2D5" Ref="#PWR?"  Part="1" 
-AR Path="/6242C2D5" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 2905 900 50  0001 C CNN
-F 1 "GND" H 2910 977 50  0000 C CNN
-F 2 "" H 2905 1150 50  0001 C CNN
-F 3 "" H 2905 1150 50  0001 C CNN
-	1    2905 1150
-	0    -1   1    0   
+AR Path="/6242C2D5" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 2990 915 50  0001 C CNN
+F 1 "GND" H 2895 1045 50  0000 C CNN
+F 2 "" H 2990 1165 50  0001 C CNN
+F 3 "" H 2990 1165 50  0001 C CNN
+	1    2990 1165
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	2830 1150 2865 1150
@@ -1242,8 +1212,6 @@ Wire Wire Line
 Wire Wire Line
 	2865 995  2830 995 
 Connection ~ 2865 1150
-Wire Wire Line
-	2865 1150 2905 1150
 Wire Wire Line
 	2570 995  2630 995 
 Wire Wire Line
@@ -1274,8 +1242,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 6246E589
 P 6490 4875
 AR Path="/6231FCB3/6246E589" Ref="#PWR?"  Part="1" 
-AR Path="/6246E589" Ref="#PWR023"  Part="1" 
-F 0 "#PWR023" H 6490 4725 50  0001 C CNN
+AR Path="/6246E589" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 6490 4725 50  0001 C CNN
 F 1 "+3.3V" H 6505 5048 50  0000 C CNN
 F 2 "" H 6490 4875 50  0001 C CNN
 F 3 "" H 6490 4875 50  0001 C CNN
@@ -1373,8 +1341,8 @@ L Pauls_Symbol_Library:+3.3V #PWR?
 U 1 1 62ACF416
 P 8470 2780
 AR Path="/6231FCB3/62ACF416" Ref="#PWR?"  Part="1" 
-AR Path="/62ACF416" Ref="#PWR011"  Part="1" 
-F 0 "#PWR011" H 8470 2630 50  0001 C CNN
+AR Path="/62ACF416" Ref="#PWR013"  Part="1" 
+F 0 "#PWR013" H 8470 2630 50  0001 C CNN
 F 1 "+3.3V" H 8485 2953 50  0000 C CNN
 F 2 "" H 8470 2780 50  0001 C CNN
 F 3 "" H 8470 2780 50  0001 C CNN
@@ -1410,8 +1378,8 @@ L power:GND #PWR?
 U 1 1 62ACF429
 P 8470 3555
 AR Path="/6231FCB3/62ACF429" Ref="#PWR?"  Part="1" 
-AR Path="/62ACF429" Ref="#PWR017"  Part="1" 
-F 0 "#PWR017" H 8470 3305 50  0001 C CNN
+AR Path="/62ACF429" Ref="#PWR019"  Part="1" 
+F 0 "#PWR019" H 8470 3305 50  0001 C CNN
 F 1 "GND" H 8475 3382 50  0000 C CNN
 F 2 "" H 8470 3555 50  0001 C CNN
 F 3 "" H 8470 3555 50  0001 C CNN
@@ -1508,10 +1476,10 @@ Wire Wire Line
 	3580 6590 3580 6665
 Connection ~ 4180 6590
 $Comp
-L power:+3.3VDAC #PWR026
+L power:+3.3VDAC #PWR028
 U 1 1 62B75B5D
 P 3435 6590
-F 0 "#PWR026" H 3585 6540 50  0001 C CNN
+F 0 "#PWR028" H 3585 6540 50  0001 C CNN
 F 1 "+3.3VDAC" H 3360 6750 50  0000 C CNN
 F 2 "" H 3435 6590 50  0001 C CNN
 F 3 "" H 3435 6590 50  0001 C CNN
@@ -1520,14 +1488,14 @@ F 3 "" H 3435 6590 50  0001 C CNN
 $EndComp
 Connection ~ 3435 6590
 $Comp
-L power:+3.3VDAC #PWR028
+L power:+3.3VDAC #PWR030
 U 1 1 62B76D11
-P 5480 6815
-F 0 "#PWR028" H 5630 6765 50  0001 C CNN
-F 1 "+3.3VDAC" H 5625 6965 50  0000 C CNN
-F 2 "" H 5480 6815 50  0001 C CNN
-F 3 "" H 5480 6815 50  0001 C CNN
-	1    5480 6815
+P 5025 6660
+F 0 "#PWR030" H 5175 6610 50  0001 C CNN
+F 1 "+3.3VDAC" H 5170 6810 50  0000 C CNN
+F 2 "" H 5025 6660 50  0001 C CNN
+F 3 "" H 5025 6660 50  0001 C CNN
+	1    5025 6660
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1535,8 +1503,8 @@ L power:GND #PWR?
 U 1 1 62B7765C
 P 4030 6905
 AR Path="/6231FCB3/62B7765C" Ref="#PWR?"  Part="1" 
-AR Path="/62B7765C" Ref="#PWR029"  Part="1" 
-F 0 "#PWR029" H 4030 6655 50  0001 C CNN
+AR Path="/62B7765C" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 4030 6655 50  0001 C CNN
 F 1 "GND" H 4150 6800 50  0000 C CNN
 F 2 "" H 4030 6905 50  0001 C CNN
 F 3 "" H 4030 6905 50  0001 C CNN
@@ -1589,7 +1557,7 @@ Wire Wire Line
 Wire Wire Line
 	7955 1570 7955 1710
 Connection ~ 7955 1710
-Text GLabel 3245 3275 2    50   Input ~ 0
+Text GLabel 3245 3575 2    50   Input ~ 0
 USER1
 $Comp
 L Mechanical:MountingHole H?
@@ -1604,64 +1572,185 @@ F 3 "~" H 7570 5680 50  0001 C CNN
 	1    7570 5680
 	1    0    0    -1  
 $EndComp
-Text GLabel 3245 3575 2    50   Input ~ 0
-EN_VSW
 Wire Wire Line
 	3245 3575 3170 3575
-Text GLabel 3245 2075 2    50   Input ~ 0
-EN_24V
 Wire Wire Line
 	3245 2075 3170 2075
-Text GLabel 3245 1675 2    50   Input ~ 0
-EN_3.3V
+Wire Wire Line
+	2990 1150 2990 1165
+Wire Wire Line
+	2865 1150 2990 1150
 $Comp
-L Connector_Generic:Conn_01x04 J?
-U 1 1 62778B95
-P 3640 5630
-AR Path="/627661BA/62778B95" Ref="J?"  Part="1" 
-AR Path="/62778B95" Ref="J5"  Part="1" 
-F 0 "J5" H 3655 5880 50  0000 C CNN
-F 1 "Nozzle2 Board (Future)" H 3605 5290 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3640 5630 50  0001 C CNN
-F 3 "~" H 3640 5630 50  0001 C CNN
-	1    3640 5630
-	-1   0    0    1   
-$EndComp
-Text Notes 3275 5465 0    50   ~ 0
-EN_VSW
-Text Notes 3275 5565 0    50   ~ 0
-EN_24V
-Text Notes 3270 5660 0    50   ~ 0
-EN_3.3V
-Text Notes 3270 5760 0    50   ~ 0
-GND
-Text GLabel 3920 5430 2    50   Input ~ 0
-EN_VSW
-Text GLabel 3920 5530 2    50   Input ~ 0
-EN_24V
-Text GLabel 3920 5630 2    50   Input ~ 0
-EN_3.3V
-Wire Wire Line
-	3840 5430 3920 5430
-Wire Wire Line
-	3840 5530 3920 5530
-Wire Wire Line
-	3840 5630 3920 5630
-Wire Wire Line
-	3840 5730 3875 5730
-Wire Wire Line
-	3875 5730 3875 5770
-$Comp
-L power:GND #PWR?
-U 1 1 627BD38A
-P 3875 5770
-AR Path="/6231FCB3/627BD38A" Ref="#PWR?"  Part="1" 
-AR Path="/627BD38A" Ref="#PWR0101"  Part="1" 
-F 0 "#PWR0101" H 3875 5520 50  0001 C CNN
-F 1 "GND" H 3995 5665 50  0000 C CNN
-F 2 "" H 3875 5770 50  0001 C CNN
-F 3 "" H 3875 5770 50  0001 C CNN
-	1    3875 5770
+L Connector_Generic:Conn_02x12_Odd_Even J5
+U 1 1 63502656
+P 5360 6805
+F 0 "J5" H 5410 7522 50  0000 C CNN
+F 1 "Conn_02x12_Odd_Even" H 5410 7431 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x12_P2.54mm_Vertical" H 5360 6805 50  0001 C CNN
+F 3 "~" H 5360 6805 50  0001 C CNN
+	1    5360 6805
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5100 7405 5160 7405
+Wire Wire Line
+	5100 7205 5100 7305
+Wire Wire Line
+	5160 7305 5100 7305
+Connection ~ 5100 7305
+Wire Wire Line
+	5100 7305 5100 7405
+Connection ~ 5100 7405
+Wire Wire Line
+	5660 7305 5725 7305
+Wire Wire Line
+	5660 7405 5725 7405
+Text GLabel 5725 7105 2    50   Input ~ 0
+SCLK
+Text GLabel 5725 7205 2    50   Input ~ 0
+MISO
+Text GLabel 5725 7305 2    50   Input ~ 0
+MOSI
+Text GLabel 5725 7405 2    50   Input ~ 0
+CS
+Text GLabel 3245 2075 2    50   Input ~ 0
+SCLK
+Text GLabel 3245 1675 2    50   Input ~ 0
+MISO
+Text GLabel 3245 2375 2    50   Input ~ 0
+MOSI
+Text GLabel 3245 1975 2    50   Input ~ 0
+CS
+$Comp
+L Connector:TestPoint TP1
+U 1 1 635790C6
+P 3685 3645
+F 0 "TP1" H 3743 3717 50  0000 L CNN
+F 1 "TestPoint" H 3743 3672 50  0001 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.5x1.5mm_Drill0.7mm" H 3885 3645 50  0001 C CNN
+F 3 "~" H 3885 3645 50  0001 C CNN
+	1    3685 3645
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3170 3675 3685 3675
+Wire Wire Line
+	3685 3675 3685 3645
+Text GLabel 3245 3275 2    50   Input ~ 0
+DAC2
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 635AF839
+P 5050 1465
+AR Path="/6231FCB3/635AF839" Ref="J?"  Part="1" 
+AR Path="/635AF839" Ref="J3"  Part="1" 
+F 0 "J3" H 5175 1245 50  0000 R CNN
+F 1 "Header" H 5245 1635 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5050 1465 50  0001 C CNN
+F 3 "~" H 5050 1465 50  0001 C CNN
+	1    5050 1465
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 635AFC85
+P 5305 1610
+AR Path="/6231FCB3/635AFC85" Ref="#PWR?"  Part="1" 
+AR Path="/635AFC85" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 5305 1360 50  0001 C CNN
+F 1 "GND" H 5310 1437 50  0000 C CNN
+F 2 "" H 5305 1610 50  0001 C CNN
+F 3 "" H 5305 1610 50  0001 C CNN
+	1    5305 1610
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1565 5305 1565
+Wire Wire Line
+	5305 1565 5305 1610
+$Comp
+L Pauls_Symbol_Library:+3.3V #PWR?
+U 1 1 635BDCA7
+P 5445 1335
+AR Path="/6231FCB3/635BDCA7" Ref="#PWR?"  Part="1" 
+AR Path="/635BDCA7" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 5445 1185 50  0001 C CNN
+F 1 "+3.3V" H 5460 1508 50  0000 C CNN
+F 2 "" H 5445 1335 50  0001 C CNN
+F 3 "" H 5445 1335 50  0001 C CNN
+	1    5445 1335
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1365 5305 1365
+Wire Wire Line
+	5445 1365 5445 1335
+Text GLabel 5325 1465 2    50   Input ~ 0
+DAC2
+Wire Wire Line
+	5325 1465 5305 1465
+Wire Notes Line
+	5730 585  5730 2255
+Wire Notes Line
+	5730 2255 4540 2255
+Wire Notes Line
+	4540 2255 4540 585 
+Wire Notes Line
+	4540 585  5720 585 
+Text Notes 4585 790  0    50   ~ 0
+DAC2 or Spare GPIO Output
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 635E9EE3
+P 4675 1465
+AR Path="/6231FCB3/635E9EE3" Ref="J?"  Part="1" 
+AR Path="/635E9EE3" Ref="J2"  Part="1" 
+F 0 "J2" H 4790 1250 50  0000 R CNN
+F 1 "Plug" H 4870 1635 50  0000 R CNN
+F 2 "Connector_Hirose:Hirose_DF13C_CL535-0403-5-51_1x03-1MP_P1.25mm_Vertical" H 4675 1465 50  0001 C CNN
+F 3 "~" H 4675 1465 50  0001 C CNN
+	1    4675 1465
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5305 1565 5305 1490
+Wire Wire Line
+	5305 1490 4980 1490
+Wire Wire Line
+	4980 1490 4980 1565
+Wire Wire Line
+	4980 1565 4875 1565
+Connection ~ 5305 1565
+Wire Wire Line
+	5305 1465 5305 1390
+Wire Wire Line
+	5305 1390 4980 1390
+Wire Wire Line
+	4980 1390 4980 1465
+Wire Wire Line
+	4980 1465 4875 1465
+Connection ~ 5305 1465
+Wire Wire Line
+	5305 1465 5250 1465
+Wire Wire Line
+	5305 1365 5305 1285
+Wire Wire Line
+	5305 1285 4980 1285
+Wire Wire Line
+	4980 1285 4980 1365
+Wire Wire Line
+	4980 1365 4875 1365
+Connection ~ 5305 1365
+Wire Wire Line
+	5305 1365 5445 1365
+Text GLabel 3245 2875 2    50   Input ~ 0
+SDA
+Text GLabel 3245 2975 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	3245 2375 3170 2375
+Wire Wire Line
+	3245 1975 3170 1975
+Wire Wire Line
+	3245 3275 3170 3275
 $EndSCHEMATC
