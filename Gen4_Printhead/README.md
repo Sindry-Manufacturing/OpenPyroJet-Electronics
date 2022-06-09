@@ -6,3 +6,7 @@ the nozzles have all been made as 0.4 mm diameter through holes with no plating 
 
 The tank has been narrowed to improve fuel circulation speed, and the inlet plate has has the solder pads for the inlet and outlet copper pipes expanded to facilitate easier soldering. 
 
+The threaded inserts that are epoxied into the 6 large holes in the nozzle plate are found here:
+https://www.keyelco.com/product.cfm/product_id/14462
+
+The 6 screws that hold the assembly together are #2-56 X 1/4"  standard stainless steel socket cap screws, driven by a 5/64" driver allen key. 
