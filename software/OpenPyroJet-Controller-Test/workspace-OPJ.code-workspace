@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "OpenPyroJet-Controller-Test",
+			"path": "."
+		}
+	],
+	"settings": {
+		"svn.ignoreMissingSvnWarning": true
+	}
+}
