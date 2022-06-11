@@ -57,8 +57,8 @@ List of todo's:
 #define HSPI_MOSI 15
 #define HSPI_MISO 2
 #define HSPI_SCLK 12
-#define powerLEDbrightness 50 // set Green Power LED to 50% brightness
-#define vswChan 0             // ADC12 chan 0 is the VSW measurement port
+#define powerLEDbrightness 50     // set Green Power LED to 50% brightness
+#define vswChan 0                 // ADC12 chan 0 is the VSW measurement port
 
 uint8_t nozzles[8] = {14, 13, 4, 16, 17, 18, 19, 23};               // list of nozzle GPIO firing pins
 float senseResistors[8] = {.04, .04, .04, .04, .03, .03, .03, .03}; // list of nozzle GPIO firing pins
@@ -68,8 +68,8 @@ const uint8_t I2C_SCL_PIN = 22;                                     // ESP32 WRO
 const uint8_t DISPLAY_WIDTH = 128;                                  // OLED display pixel width
 const uint8_t DISPLAY_HEIGHT = 64;                                  // OLED display pixel height
 bool ledMode = 0;
-bool circleValues = false; // circle around rotary encoder or not
-// bool circleValues = true;  // circle around rotary encoder or not
+bool circleValues = false;            // circle around rotary encoder or not
+// bool circleValues = true;          // circle around rotary encoder or not
 uint8_t menuState = 1;                // entry state of the menuState machine
 uint8_t nozzleNumber = 1;             // current nozzle number selected
 uint8_t pulseLength = 1;              // current pulse length in miliSeconds
@@ -284,7 +284,6 @@ void setup()
   rotaryEncoder.setBoundaries(0, 255, circleValues); // minValue, maxValue, circleValues true|false (when max go to min and vice versa)
   rotaryEncoder.setEncoderValue(1);                  // set the starting number
   rotaryEncoder.setAcceleration(150);                // Acceleration 2-255; 0 or 1 disables Accel.
-
   // set RGB LED to State 1
   leds[0] = CHSV(96, 255, BRIGHTNESS); // set to Green
   FastLED.show();
@@ -363,7 +362,7 @@ void loop()
     // go and display the recoded nozzle current values
     for (uint8_t i = 0; i < buffSize ; i++)
     {
-      Serial.println(buff[i] * vADC / 1.5 * 11); // divide by 1.5 for 0.03 ohm resistor; divide by 2 for 0.04 ohm resistor
+      Serial.println(buff[i] * vADC * 11); // divide by 1.5 for 0.03 ohm resistor; divide by 2 for 0.04 ohm resistor; time by 11 for VSW
       if (buff[i]<minVolts & buff[i]> 0)
       {
         minVolts = buff[i];
