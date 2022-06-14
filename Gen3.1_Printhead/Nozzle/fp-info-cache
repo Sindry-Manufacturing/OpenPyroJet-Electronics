@@ -1,4 +1,4 @@
-19604534944119759
+19607834438235171
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72688,6 +72688,13 @@ LED_WS2812-2020
 4
 4
 Pauls_KiCAD_Libraries
+LED_WS2812B-3535
+
+
+0
+4
+4
+Pauls_KiCAD_Libraries
 LED_Wire_Plug_Piercer_Pad
 
 
@@ -72722,6 +72729,13 @@ MCA1101-5-3
 0
 16
 16
+Pauls_KiCAD_Libraries
+MIC2097-1YMT-TR
+
+
+0
+7
+7
 Pauls_KiCAD_Libraries
 MIC_SPH0641LU4H-1
 

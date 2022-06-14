@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Open-PyroJet-Driver"
-Date "2022-05-11"
-Rev "0.6a"
+Date "2022-06-12"
+Rev "0.7"
 Comp "PRL"
 Comment1 "Open Hardware"
 Comment2 ""
@@ -485,7 +485,7 @@ Connection ~ 2380 4610
 Wire Wire Line
 	2380 4610 2380 4575
 Text Notes 7535 6335 0    50   ~ 0
-Motor Driver H-Bridge IC:\n------------------\nAT8870 - 38V 3.6A, 29K STK, A$1.25/30\nRZ7899 - 25V 6A 84K STK, A$0.51/30\nHV8548 - 28V 1.2A-2.4A, 5K STK, A$0.78/30\nPT2470 - 36V 3.6A, 2.5K STK, A0.80/30\nTMI8870B - 45V 3.6A, 3.5K STK, A$0.90/30 (up to 100KHz PWM = 10uSec pules)
+Motor Driver H-Bridge IC:\n------------------\nAT8870 - 38V 3.6A, 29K STK, A$1.25/30\nRZ7899 - 25V 6A 84K STK, A$0.51/30 (no sense resistor)\nHV8548 - 28V 1.2A-2.4A, 5K STK, A$0.78/30\nPT2470 - 36V 3.6A, 2.5K STK, A0.80/30\nTMI8870B - 45V 3.6A, 3.5K STK, A$0.90/30 (up to 100KHz PWM = 10uSec pules)
 $Comp
 L Pauls_Symbol_Library:TMI8870B U?
 U 1 1 6313EA8A

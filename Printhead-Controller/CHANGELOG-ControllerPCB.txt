@@ -1,0 +1,44 @@
+
+This directory contains KiCAD 5.1.x design files for the OpenPyroJet Controller Board. 
+ 
+
+Controller Board:
+-----------------
+
+V0.7:
+Production: JLCPCB, 2 Layer, 1.6mm, Black
+Date:  2022-06-14
+ 
+Done: added OLED 128x128px M2 mounting hole to PCB
+Done: changed R4 from 10uF to 100nF so Rotary Encoder would work CCW
+
+
+V0.6:
+Production: JLCPCB, 2 Layer, 1.6mm, Blue
+Date:  2022-05-11
+
+* would it be handy to include a set of 4 DIP switches for easy user/program config? (not enough spare GPIO for this)
+Done: move the M3 OLED screen mounting hole a bit downwards 0.5mm
+Done: move RGB LED to otherside of board to make it easier to be seen.
+Done: rotate D3+R8 (buzzer) to RH or LH side of buzzer
+Done: swap the 4 x 0402 resistors to 0603, to make it easier for people to assemble
+Done: change UART: EN & IO0 labels to match ESP32: RESET & BOOT
+Done: remove i2C being sent to Driver board and replace with SPI-4 pin
+Done: swap out 20pin connector for a 24 pin connector to the Driver board
+Done: break out all non-used GPIO to a Test Point (TP).
+Done: add connector for printhead pump circulation via PWM on GPIO26 to external board
+Done: fix Green LED text (extra L) on back of PCB
+Done: add a white box for S/N area to back of PCB
+Done: add User Switch GPIO text to back of PCB:  GPIO26
+
+
+V0.5:
+Production: JLCPCB, 4 Layer, 1.6mm, Green
+Date:  2022-03-22
+
+Initial version.
+Done: use a ESP32-Wroom-32E 16MB Flash MCU
+Done: Rotary Encoder for menu selection
+Done: 128x64px i2C OLED screen
+Done: add a 20 pin (2 x 10 pin header) connector to mate with Driver board
+Done: Micro USB connector for programming via CP2102 UART

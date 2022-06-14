@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Open-PyroJet Controller"
-Date "2022-05-09"
-Rev "0.6a"
+Date "2022-06-14"
+Rev "0.7"
 Comp "OPJ"
 Comment1 "PRL"
 Comment2 ""
@@ -468,7 +468,7 @@ P 1665 2080
 AR Path="/6231FCB3/62340863" Ref="C?"  Part="1" 
 AR Path="/62340863" Ref="C4"  Part="1" 
 F 0 "C4" H 1745 2000 50  0000 L CNN
-F 1 "10uF" H 1695 2165 50  0000 L CNN
+F 1 "100nF" H 1695 2165 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1665 2080 50  0001 C CNN
 F 3 "~" H 1665 2080 50  0001 C CNN
 F 4 "16V Ceramic" H 1665 2080 50  0001 C CNN "Description"
@@ -1562,14 +1562,14 @@ USER1
 $Comp
 L Mechanical:MountingHole H?
 U 1 1 62CE5555
-P 7570 5680
+P 7560 5590
 AR Path="/6231FCB3/62CE5555" Ref="H?"  Part="1" 
 AR Path="/62CE5555" Ref="H5"  Part="1" 
-F 0 "H5" H 7670 5726 50  0000 L CNN
-F 1 "MH-M3" H 7670 5635 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 7570 5680 50  0001 C CNN
-F 3 "~" H 7570 5680 50  0001 C CNN
-	1    7570 5680
+F 0 "H5" H 7660 5636 50  0000 L CNN
+F 1 "MH-M3" H 7660 5545 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7560 5590 50  0001 C CNN
+F 3 "~" H 7560 5590 50  0001 C CNN
+	1    7560 5590
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1753,4 +1753,17 @@ Wire Wire Line
 	3245 1975 3170 1975
 Wire Wire Line
 	3245 3275 3170 3275
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 62AC310F
+P 7560 5760
+AR Path="/6231FCB3/62AC310F" Ref="H?"  Part="1" 
+AR Path="/62AC310F" Ref="H6"  Part="1" 
+F 0 "H6" H 7660 5806 50  0000 L CNN
+F 1 "MH-M2" H 7660 5715 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 7560 5760 50  0001 C CNN
+F 3 "~" H 7560 5760 50  0001 C CNN
+	1    7560 5760
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,0 +1,65 @@
+
+This directory contains KiCAD 5.1.x design files for a set of PCB's that make up the OpenPyroJet Gen 3.1 printhead. 
+ 
+
+
+Driver Board:
+-------------
+
+V0.7:
+Production: JLCPCB, 2 Layer, 1.6mm, Black
+Date:  2022-06-12
+
+Done: add another resistor in series with R15 (6V feedback voltage divider, so R15 can be tweeked.  Best to be 1150 ohms.  I have 1100 and 47 ohms, or 1000 + 150 Ohms.
+Done: added test point for 5V Vrefence
+Done: add a small power switch.  It just needs to turn the input MOSFET on/off
+Done: add a test point at VSW voltage devider, to make it easier to read
+Done: Look to add one of my 5V voltage reference (SOT23-3) IC's. Can do 15mA with a 6+V input voltage
+Done: Read ADC128 datasheet on input filter values.  Need to add a 100 ohm resistor in series. Only done for the VSW Port 0 line.
+Done: change R9 (88K) to 100K, R8 (12K) to 10K.  See calculation in LCSC order spreadsheet: 45V=4.09V; 24V=2.18V
+Done: change 12V Zener footprint from 0805 to SOD-123
+
+
+V0.6:
+Production: JLCPCB, 2 Layer, 1.6mm, Blue
+Date:  2022-05-11
+
+* how to bring out nozzle GPIO + Current Sense resistors to TP's so we can use Dupont connectors to monitor them?  Just continue mounting on the Sense resistor.
+* when in program mode, the ESP32 drives one of the nozzles one?  Which one?
+Done: Added a GPIO26 PWM pin output for pump control
+Done: replace 24V input connector with a SMD XH connector
+Done:  safely discharge VSW caps (VSW Volt Divider will do this)
+Done: mark each driver IC with Nozzle number on silkscreen layer
+Done: leave off the extra motor driver 100nF VSW rated caps. Looks to be working fine without
+Done: add Nozzle # to bottom of nozzle connector
+Done: add a white box for S/N area to back of PCB
+Done:  Add filer caps foorptints to Motor Sense resisor and ADC inputs.
+Done: change 0.03 ohm motor driver sense resistors from 2512 to 1206 0.04 ohm 
+Done: ditch the MA1101 current sensor
+Done: Add INA180 to R2 (0.04 ohms) and feed each into the ADC128
+Done: should I have extra ADC power filtering?  1uH inductor vs. 120m Ohm FB?
+Done: Do we want a fuse for 24V input? 
+Done: change 0805 LEDs and resistors to 0603
+Done: add VCC - 3.3V to U9 pin 10!
+Done: change 22uF/50V cap C37 to 1206 size 22uF/50V and order them
+Done: change 1/2 the 100nF Caps for Motor driver IC's to 100V
+Done: change both 50V 100nF caps to 100V
+Done: remove one large 1000uF  cap
+Done: look at changing to a SPI based ADC128 IC. Allows seperate 5V/3.3V inputs.
+Done: change 3.3V DC-DC converter to 6V + filter o/p.  Then use a 5V LDO + 3.3V LDO to help minimise noise and line ripple
+Done: add a voltage divider to measure (via SPI ADC) the VSW voltage from the PSU?
+Done: could put a RU30L30 mosfet as a power reversal protection on the input. Remove D2
+ 
+
+V0.5:
+Production: JLCPCB, 4 Layer, 1.6mm, Green
+Date:  2022-03-22
+
+Initial version.
+Done: add a MA1101 current sensor to monitor VSW current.
+Done: Add a ADC121 ADC to measure MA1101 output
+Done: use TMI8870 45V @ 3.6A Motor Driver IC's to drive each of the Nozzle filaments
+Done: add a XL6019 24V to 45V @ 4A DC-DC boost converter
+Done: add a MC34063 24V to 6V DC-DC buck converter
+Done: add 5V and 3.3V LDO's.
+
