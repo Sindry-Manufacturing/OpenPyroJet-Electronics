@@ -57,8 +57,8 @@ List of todo's:
 #define HSPI_MOSI 15
 #define HSPI_MISO 2
 #define HSPI_SCLK 12
-#define powerLEDbrightness 50     // set Green Power LED to 50% brightness
-#define vswChan 0                 // ADC12 chan 0 is the VSW measurement port
+#define powerLEDbrightness 50 // set Green Power LED to 50% brightness
+#define vswChan 0             // ADC12 chan 0 is the VSW measurement port
 
 uint8_t nozzles[8] = {14, 13, 4, 16, 17, 18, 19, 23};               // list of nozzle GPIO firing pins
 float senseResistors[8] = {.04, .04, .04, .04, .03, .03, .03, .03}; // list of nozzle GPIO firing pins
@@ -68,7 +68,7 @@ const uint8_t I2C_SCL_PIN = 22;                                     // ESP32 WRO
 const uint8_t DISPLAY_WIDTH = 128;                                  // OLED display pixel width
 const uint8_t DISPLAY_HEIGHT = 64;                                  // OLED display pixel height
 bool ledMode = 0;
-bool circleValues = false;            // circle around rotary encoder or not
+bool circleValues = false; // circle around rotary encoder or not
 // bool circleValues = true;          // circle around rotary encoder or not
 uint8_t menuState = 1;                // entry state of the menuState machine
 uint8_t nozzleNumber = 1;             // current nozzle number selected
@@ -209,7 +209,7 @@ void buffADC(SPIClass *spi, uint8_t channel, uint16_t firetime, uint16_t buff[],
   Serial.println(firetime);
   Serial.print("Buffer Size: ");
   Serial.println(bufferSize);
-    digitalWrite(HSPI_CS, LOW); // pull ss/cs low to turn on ADC128 IC and to initiate data transfer
+  digitalWrite(HSPI_CS, LOW); // pull ss/cs low to turn on ADC128 IC and to initiate data transfer
   for (uint8_t i = 0; i < bufferSize + 1; i++)
   {
     currentTime = micros();
@@ -227,11 +227,11 @@ void buffADC(SPIClass *spi, uint8_t channel, uint16_t firetime, uint16_t buff[],
     }
     else
     {
-      //digitalWrite(HSPI_CS, HIGH);         // pull ss/cs high to signify end of data transfer. only need to do this once though.  Fix the code.
+      // digitalWrite(HSPI_CS, HIGH);         // pull ss/cs high to signify end of data transfer. only need to do this once though.  Fix the code.
       *(buff + i) = spi->transfer16(chan); // we send it the channel number shifted into the MSB and get back the 12bit reading
     }
   }
-      digitalWrite(HSPI_CS, HIGH);         // pull ss/cs high to signify end of data transfer. only need to do this once though.  Fix the code.
+  digitalWrite(HSPI_CS, HIGH); // pull ss/cs high to signify end of data transfer. only need to do this once though.  Fix the code.
   // return;
 }
 
@@ -308,6 +308,10 @@ void loop()
   uint8_t reValue = 0;
   uint16_t minVolts = 8000;
   uint16_t maxVolts = 0;
+  bool reButtonPress = false;          // stores state of Rotary Encoder button press
+  uint8_t previousNozzleNumber = 63;   // stores previous value
+  uint8_t previousPulseLength = 63;    // stores previous value
+  uint8_t previousCalibrationMode = 0; // stores previous value
   if (LEDwarning > 255)
   {
     LEDwarning = 255;
@@ -334,11 +338,11 @@ void loop()
     Serial.println(buffSize);
     nozzleNumber = chnl;
     readADC(hspi, chnl); // change to read current nozzle
-    //digitalWrite(nozzles[nozzleNumber], 1);
+    // digitalWrite(nozzles[nozzleNumber], 1);
     uint32_t startTime = micros();
     buffADC(hspi, chnl, fireTime, buff, buffSize);
     uint32_t endTime = micros();
-    //digitalWrite(nozzles[nozzleNumber], 0);
+    // digitalWrite(nozzles[nozzleNumber], 0);
     if (startTime < endTime)
     {
       Serial.print("MicroSeconds to read sensor: ");
@@ -360,7 +364,7 @@ void loop()
     Serial.print(pulseLength);
     Serial.println(" mSec!");
     // go and display the recoded nozzle current values
-    for (uint8_t i = 0; i < buffSize ; i++)
+    for (uint8_t i = 0; i < buffSize; i++)
     {
       Serial.println(buff[i] * vADC * 11); // divide by 1.5 for 0.03 ohm resistor; divide by 2 for 0.04 ohm resistor; time by 11 for VSW
       if (buff[i]<minVolts & buff[i]> 0)
@@ -392,7 +396,7 @@ void loop()
   {
     // activate rotary encoder if its changed
     blinkPowerLED();
-    reValue = rotaryEncoder.readEncoder();
+    //reValue = rotaryEncoder.readEncoder();
     Serial.print("New RE Value: ");
     Serial.println(reValue);
     switch (menuState)
@@ -400,26 +404,41 @@ void loop()
     // update current menu value with new RE value
     case 1:
       // update Nozzle number 0-7
-      nozzleNumber = reValue;
+      if (reButtonPress)
+      {
+        rotaryEncoder.setEncoderValue(previousNozzleNumber);
+        reButtonPress = false;
+      }
+      nozzleNumber = rotaryEncoder.readEncoder();;
       if (nozzleNumber > 7)
       {
         nozzleNumber = 7;
+        rotaryEncoder.setEncoderValue(7);
       }
       else if (nozzleNumber < 0)
       {
         nozzleNumber = 0;
+        rotaryEncoder.setEncoderValue(0);
       }
       break;
     case 2:
       // update pulse Length value
-      pulseLength = reValue;
+      if (reButtonPress)
+      {
+        rotaryEncoder.setEncoderValue(previousPulseLength);
+        reButtonPress = false;
+      }
+      //pulseLength = reValue;
+      pulseLength = rotaryEncoder.readEncoder();;
       if (pulseLength > 20)
       {
         pulseLength = 20;
+        rotaryEncoder.setEncoderValue(20);
       }
       else if (pulseLength < 1)
       {
         pulseLength = 1;
+        rotaryEncoder.setEncoderValue(1);
       }
       break;
     case 3:
@@ -437,16 +456,21 @@ void loop()
       menuState = 2;
       leds[0] = CHSV(160, 255, BRIGHTNESS); // set to Blue
       FastLED.show();
+      previousNozzleNumber = nozzleNumber;
+      reButtonPress = true; // stores state of Rotary Encoder button press
       break;
     case 2:
       menuState = 3;
       leds[0] = CHSV(0, 255, LEDwarning); // set to RED
       FastLED.show();
+      previousPulseLength = pulseLength;
+      reButtonPress = true; // stores state of Rotary Encoder button press
       break;
     case 3:
       menuState = 1;
       leds[0] = CHSV(96, 255, BRIGHTNESS); // set to Green
       FastLED.show();
+      reButtonPress = true; // stores state of Rotary Encoder button press
       break;
     }
     SoundBuzzer();
