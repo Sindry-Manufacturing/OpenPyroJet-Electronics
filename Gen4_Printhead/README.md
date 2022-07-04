@@ -1,3 +1,7 @@
+Production:
+JLPCB, 2 layer, 1.6mm, green, ENIG on connector plate only standard solder finish on all others. 
+Connection is provided by a 0.1" 16 pin IDC female box connector.
+
 This is the latest edition of the pyrojet printhead, with straight pass through nozzles, and material feedin channels, as well as a greatly simplified assembly process.
 The use of threaded inserts helps greatly with ease of assembly and disassembly, as well as circuit routing. 
 The prior generation's M1 screws have been eliminated completely. 
@@ -10,3 +14,6 @@ The threaded inserts that are epoxied into the 6 large holes in the nozzle plate
 https://www.keyelco.com/product.cfm/product_id/14462
 
 The 6 screws that hold the assembly together are #2-56 X 1/4"  standard stainless steel socket cap screws, driven by a 5/64" driver allen key. 
+these screws can be found here:
+https://www.amazon.com/dp/B073WPSSNS?psc=1&ref=ppx_yo2ov_dt_b_product_details
+
