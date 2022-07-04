@@ -17,3 +17,6 @@ The 6 screws that hold the assembly together are #2-56 X 1/4"  standard stainles
 these screws can be found here:
 https://www.amazon.com/dp/B073WPSSNS?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
+The zip files herein are the manufacturing files you need to upload at JLPCB or manufacturer of your choice to get your print heads made. 
+You can upload them as is and recieve your printheads in a couple weeks. 
+Generally, the print heads are cheaper per part in larger batches. 
