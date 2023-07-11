@@ -1,6 +1,7 @@
 # OpenPyroJet-Electronics
 
 Software licensed under: AGPL-3
+
 Hardware licensed under: CERN-OHL-2
 
 These sets of sub-folders contain KiCAD 5.1 based designs for experimenting with a PCB based metal/ceramic 3D Printer. 
